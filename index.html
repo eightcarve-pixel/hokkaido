@@ -167,7 +167,8 @@ h1, h2, h3, p { margin: 0; }
 #r2:checked ~ .tabs label[for="r2"],
 #r3:checked ~ .tabs label[for="r3"],
 #r4:checked ~ .tabs label[for="r4"],
-#r5:checked ~ .tabs label[for="r5"] {
+#r5:checked ~ .tabs label[for="r5"],
+#r6:checked ~ .tabs label[for="r6"] {
   background: var(--tab-on-bg);
   color: var(--tab-on-fg);
   border-color: var(--tab-on-bg);
@@ -177,7 +178,8 @@ h1, h2, h3, p { margin: 0; }
 #r2:focus-visible ~ .tabs label[for="r2"],
 #r3:focus-visible ~ .tabs label[for="r3"],
 #r4:focus-visible ~ .tabs label[for="r4"],
-#r5:focus-visible ~ .tabs label[for="r5"] { outline: 3px solid var(--lantern); outline-offset: 2px; }
+#r5:focus-visible ~ .tabs label[for="r5"],
+#r6:focus-visible ~ .tabs label[for="r6"] { outline: 3px solid var(--lantern); outline-offset: 2px; }
 
 
 /* 表紙 */
@@ -206,7 +208,8 @@ h1, h2, h3, p { margin: 0; }
 #r2:checked ~ main #d2,
 #r3:checked ~ main #d3,
 #r4:checked ~ main #d4,
-#r5:checked ~ main #d5 { display: block; }
+#r5:checked ~ main #d5,
+#r6:checked ~ main #d6 { display: block; }
 
 .day-title {
   font-family: var(--font-soft);
@@ -306,8 +309,8 @@ h1, h2, h3, p { margin: 0; }
 .more ul { margin: 2px 0 4px; padding-left: 1.2em; color: var(--ink); }
 .more-note { color: var(--note); font-size: 12px; }
 /* 小樽飯タブ */
-.tabs { gap: 5px; }
-.tab { padding: 9px 1px; font-size: 12px; }
+.tabs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.tab { padding: 8px 2px; font-size: 12.5px; }
 .food-sec { font-family: var(--font-soft); font-weight: 500; font-size: 16px; color: var(--title); margin: 22px 4px 10px; }
 .shop { background: var(--card); border: 1.5px solid var(--line); border-radius: 18px; padding: 11px 14px 12px; margin: 0 4px 12px; }
 .shop.main { border-color: var(--lantern); }
@@ -321,6 +324,9 @@ h1, h2, h3, p { margin: 0; }
 .yt a { display: block; background: var(--card); border: 1.5px solid var(--line); border-radius: 16px; padding: 10px 14px; color: var(--ink); text-decoration: none; font-size: 13px; font-weight: 700; margin-bottom: 8px; }
 .yt a small { display: block; font-weight: 500; color: var(--note); font-size: 12px; }
 .shop ul a { color: var(--ice-ink); font-weight: 700; }
+.day-plan { margin: 0 4px 12px; background: var(--card); border: 1.5px solid var(--line); border-radius: 18px; padding: 11px 14px; }
+.day-plan b { display: block; font-family: var(--font-soft); font-weight: 500; font-size: 15px; color: var(--title); margin-bottom: 2px; }
+.day-plan ul { margin: 0; padding-left: 1.2em; font-size: 13px; }
 .plan { background: var(--warm-bg); border: 1.5px solid var(--lantern); border-radius: 18px; padding: 12px 14px; margin: 4px 4px 0; font-size: 13.5px; line-height: 1.9; }
 .plan-title { font-weight: 900; color: var(--warm-ink); margin-bottom: 2px; }
 .foot { margin: 22px 4px 0; text-align: center; font-family: var(--font-soft); font-size: 13px; color: var(--note); }
@@ -344,6 +350,7 @@ h1, h2, h3, p { margin: 0; }
   <input class="sr" type="radio" name="tab" id="r3" aria-label="3日目">
   <input class="sr" type="radio" name="tab" id="r4" aria-label="ご案内">
   <input class="sr" type="radio" name="tab" id="r5" aria-label="小樽飯検討">
+  <input class="sr" type="radio" name="tab" id="r6" aria-label="札幌飯検討">
 
   <nav class="tabs">
     <label class="tab" for="r0">表紙<small>小隊</small></label>
@@ -352,6 +359,7 @@ h1, h2, h3, p { margin: 0; }
     <label class="tab" for="r3">3日目<small>12/10 木</small></label>
     <label class="tab" for="r4">ご案内<small>宿・便</small></label>
     <label class="tab" for="r5">小樽飯<small>検討中</small></label>
+    <label class="tab" for="r6">札幌飯<small>検討中</small></label>
   </nav>
 
   <main>
@@ -714,6 +722,134 @@ h1, h2, h3, p { margin: 0; }
       <div class="alert ice">
         <p class="alert-title">💡 YouTubeの小ワザ</p>
         動画右上の⚙️(設定)→「再生速度」→「2倍速」で、情報系の動画をサクッとチェックできるよ✨
+      </div>
+    </section>
+
+    <!-- 札幌飯検討 -->
+    <section class="panel" id="d6">
+      <h2 class="day-title">札幌飯検討｜グルメガイド🦀</h2>
+      <p class="day-sub">札幌〜すすきのエリア中心 ・ 🏨 ホテルマイステイズ札幌駅北口</p>
+
+      <div class="alert">
+        <p class="alert-title">😊 候補だから、見るだけでOK！</p>
+        気になるお店があったら教えてね。
+      </div>
+
+      <h3 class="food-sec">🍣 寿司・海鮮</h3>
+
+      <div class="shop main">
+        <p class="shop-name">① 根室花まる ココノススキノ店</p>
+        <span class="shop-role">⭐ 第一候補</span>
+        <ul>
+          <li>COCONO SUSUKINO 地下1階(すすきの)</li>
+          <li>営業:11:00〜21:00(L.O. 20:30)</li>
+          <li>席の予約はできず、店頭の発券機で受付</li>
+        </ul>
+        <div class="links">
+          <a href="https://www.sushi-hanamaru.com/store/details/cocono.html?p=b" target="_blank" rel="noopener">公式HP</a>
+        </div>
+      </div>
+
+      <div class="shop">
+        <p class="shop-name">② できたて屋 JRタワーステラプレイス店</p>
+        <span class="shop-role">花まる系列の焼き魚定食</span>
+        <ul>
+          <li>JRタワー ステラプレイス センター6階</li>
+          <li>ホテルから徒歩約5〜10分</li>
+          <li>営業:11:00〜22:00</li>
+          <li>炭火の一夜干しや海鮮丼が楽しめる</li>
+        </ul>
+        <div class="links">
+          <a href="https://tabelog.com/hokkaido/A0101/A010101/1073000/" target="_blank" rel="noopener">食べログ</a>
+        </div>
+      </div>
+
+      <div class="shop main">
+        <p class="shop-name">③ 瑠玖＆魚平(るっく＆うおへい)</p>
+        <span class="shop-role">⭐ おすすめ</span>
+        <ul>
+          <li>札幌・狸小路6丁目の海鮮居酒屋</li>
+          <li>予算:1人 3,000〜5,000円くらい</li>
+          <li>おまかせ刺身5点盛りなど、刺身が充実</li>
+          <li>花まるとは違う、居酒屋スタイルの海鮮</li>
+        </ul>
+        <div class="links">
+          <a href="https://www.izakaya-rukku.com/" target="_blank" rel="noopener">公式HP</a>
+        </div>
+      </div>
+
+      <h3 class="food-sec">🍛 スープカレー</h3>
+
+      <div class="shop">
+        <p class="shop-name">① Suage4(スアゲ4)</p>
+        <span class="shop-role">🏆 食べログ カレーEAST百名店2026</span>
+        <ul>
+          <li>札幌市中央区北3条西3丁目1-1 miredo 2階</li>
+          <li>ホテルから徒歩約8分(800m)</li>
+          <li>限定「梅しそせせりカレー」</li>
+        </ul>
+        <div class="links">
+          <a href="https://tabelog.com/hokkaido/A0101/A010101/1064968/" target="_blank" rel="noopener">食べログ</a>
+        </div>
+      </div>
+
+      <div class="shop">
+        <p class="shop-name">② カリーサボイ(Curry SAVOY)</p>
+        <span class="shop-role">🏆 食べログ カレー百名店</span>
+        <ul>
+          <li>札幌市北区北8条西4丁目</li>
+          <li>ホテルから徒歩約3分</li>
+          <li>スープの旨みとスパイスが魅力</li>
+          <li>最終日のランチ向き</li>
+        </ul>
+        <div class="links">
+          <a href="https://tabelog.com/hokkaido/A0101/A010101/1060249/" target="_blank" rel="noopener">食べログ</a>
+        </div>
+      </div>
+
+      <h3 class="food-sec">📅 日程別の候補</h3>
+
+      <div class="day-plan">
+        <b>▶ 12/8(火) 空港 → 小樽</b>
+        <ul>
+          <li>空港グルメは別ページにまとめる予定</li>
+          <li>空港と小樽で食べ過ぎ注意🍽️</li>
+        </ul>
+      </div>
+      <div class="day-plan">
+        <b>▶ 12/9(水) 小樽 → 札幌・すすきの</b>
+        <ul>
+          <li>札幌駅周辺:できたて屋 / Suage4 / サボイ</li>
+          <li>すすきの:花まる / 瑠玖＆魚平</li>
+          <li>昼と夜の組み合わせは、観光の進み具合で決めよう</li>
+        </ul>
+      </div>
+      <div class="day-plan">
+        <b>▶ 12/10(木) 札幌 → 空港</b>
+        <ul>
+          <li>スアゲ4でランチ</li>
+          <li>空港ではフライトと買い物の時間を優先</li>
+        </ul>
+      </div>
+
+      <h3 class="food-sec">🎬 参考YouTube</h3>
+      <div class="yt">
+        <a href="https://youtu.be/yEtFBRuRYz4" target="_blank" rel="noopener">札幌生まれが食べ歩き。マジうま19店【サイコロ5】<small>「瑠玖＆魚平」が良さそう✨(途中長いのでスキップ推奨)</small></a>
+      </div>
+
+      <div class="plan">
+        <p class="plan-title">💡 メモ</p>
+        ① 寿司・焼き魚・居酒屋・カレーで、ジャンルを分ける<br>
+        ② 札幌駅周辺は、ホテル近くのお店を使う<br>
+        ③ 1日に詰め込みすぎない
+      </div>
+
+      <div class="alert ice" style="margin-top:14px">
+        <p class="alert-title">⚠️ 出発前に確認</p>
+        ・12/9(水)の各店の営業状況<br>
+        ・スアゲ4の12/10(木)の営業時間・定休日<br>
+        ・各店の営業時間・定休日・価格<br>
+        ※お店は候補段階です
       </div>
     </section>
 
