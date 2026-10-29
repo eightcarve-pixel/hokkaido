@@ -166,7 +166,8 @@ h1, h2, h3, p { margin: 0; }
 #r1:checked ~ .tabs label[for="r1"],
 #r2:checked ~ .tabs label[for="r2"],
 #r3:checked ~ .tabs label[for="r3"],
-#r4:checked ~ .tabs label[for="r4"] {
+#r4:checked ~ .tabs label[for="r4"],
+#r5:checked ~ .tabs label[for="r5"] {
   background: var(--tab-on-bg);
   color: var(--tab-on-fg);
   border-color: var(--tab-on-bg);
@@ -175,7 +176,8 @@ h1, h2, h3, p { margin: 0; }
 #r1:focus-visible ~ .tabs label[for="r1"],
 #r2:focus-visible ~ .tabs label[for="r2"],
 #r3:focus-visible ~ .tabs label[for="r3"],
-#r4:focus-visible ~ .tabs label[for="r4"] { outline: 3px solid var(--lantern); outline-offset: 2px; }
+#r4:focus-visible ~ .tabs label[for="r4"],
+#r5:focus-visible ~ .tabs label[for="r5"] { outline: 3px solid var(--lantern); outline-offset: 2px; }
 
 
 /* 表紙 */
@@ -203,7 +205,8 @@ h1, h2, h3, p { margin: 0; }
 #r1:checked ~ main #d1,
 #r2:checked ~ main #d2,
 #r3:checked ~ main #d3,
-#r4:checked ~ main #d4 { display: block; }
+#r4:checked ~ main #d4,
+#r5:checked ~ main #d5 { display: block; }
 
 .day-title {
   font-family: var(--font-soft);
@@ -302,6 +305,24 @@ h1, h2, h3, p { margin: 0; }
 .more-h { font-weight: 900; color: var(--ice-ink); margin-top: 6px; }
 .more ul { margin: 2px 0 4px; padding-left: 1.2em; color: var(--ink); }
 .more-note { color: var(--note); font-size: 12px; }
+/* 小樽飯タブ */
+.tabs { gap: 5px; }
+.tab { padding: 9px 1px; font-size: 12px; }
+.food-sec { font-family: var(--font-soft); font-weight: 500; font-size: 16px; color: var(--title); margin: 22px 4px 10px; }
+.shop { background: var(--card); border: 1.5px solid var(--line); border-radius: 18px; padding: 11px 14px 12px; margin: 0 4px 12px; }
+.shop.main { border-color: var(--lantern); }
+.shop-name { font-family: var(--font-soft); font-weight: 500; font-size: 16px; color: var(--ink); margin: 0; }
+.shop.main .shop-name { color: var(--berry); }
+.shop-role { display: inline-block; margin-top: 4px; font-size: 12px; font-weight: 700; color: var(--warm-ink); background: var(--warm-bg); border-radius: 999px; padding: 1px 10px; }
+.shop ul { margin: 6px 0 0; padding-left: 1.2em; font-size: 13px; color: var(--ink); display: flex; flex-direction: column; gap: 2px; }
+.links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.links a { font-size: 12px; font-weight: 700; color: var(--ice-ink); background: var(--ice-bg); border: 1.5px solid var(--mid); border-radius: 999px; padding: 2px 11px; text-decoration: none; }
+.yt { margin: 0 4px 12px; }
+.yt a { display: block; background: var(--card); border: 1.5px solid var(--line); border-radius: 16px; padding: 10px 14px; color: var(--ink); text-decoration: none; font-size: 13px; font-weight: 700; margin-bottom: 8px; }
+.yt a small { display: block; font-weight: 500; color: var(--note); font-size: 12px; }
+.shop ul a { color: var(--ice-ink); font-weight: 700; }
+.plan { background: var(--warm-bg); border: 1.5px solid var(--lantern); border-radius: 18px; padding: 12px 14px; margin: 4px 4px 0; font-size: 13.5px; line-height: 1.9; }
+.plan-title { font-weight: 900; color: var(--warm-ink); margin-bottom: 2px; }
 .foot { margin: 22px 4px 0; text-align: center; font-family: var(--font-soft); font-size: 13px; color: var(--note); }
 </style>
 <div class="app">
@@ -322,6 +343,7 @@ h1, h2, h3, p { margin: 0; }
   <input class="sr" type="radio" name="tab" id="r2" aria-label="2日目">
   <input class="sr" type="radio" name="tab" id="r3" aria-label="3日目">
   <input class="sr" type="radio" name="tab" id="r4" aria-label="ご案内">
+  <input class="sr" type="radio" name="tab" id="r5" aria-label="小樽飯検討">
 
   <nav class="tabs">
     <label class="tab" for="r0">表紙<small>小隊</small></label>
@@ -329,6 +351,7 @@ h1, h2, h3, p { margin: 0; }
     <label class="tab" for="r2">2日目<small>12/9 水</small></label>
     <label class="tab" for="r3">3日目<small>12/10 木</small></label>
     <label class="tab" for="r4">ご案内<small>宿・便</small></label>
+    <label class="tab" for="r5">小樽飯<small>検討中</small></label>
   </nav>
 
   <main>
@@ -577,6 +600,120 @@ h1, h2, h3, p { margin: 0; }
           <li>最少催行人員は1名です</li>
           <li>2027年3月31日(沖縄は5月6日)までに出発の方が対象です</li>
         </ul>
+      </div>
+    </section>
+
+    <!-- 小樽飯検討 -->
+    <section class="panel" id="d5">
+      <h2 class="day-title">小樽飯検討｜海鮮🐟</h2>
+      <p class="day-sub">1日目の晩ご飯と2日目のお昼ご飯の候補 ・ 作成：だい隊員</p>
+
+      <div class="plan">
+        <p class="plan-title">📅 食べる予定</p>
+        🌙 1日目の晩ご飯 → ①浜茶屋さん(②和楽が予備)<br>
+        ☀️ 2日目のお昼ご飯 → ③滝波食堂(④たけだが予備)
+      </div>
+
+      <h3 class="food-sec">🌙 1日目の晩ご飯(候補)</h3>
+
+      <div class="shop main">
+        <p class="shop-name">① 浜茶屋さん 🍶</p>
+        <span class="shop-role">晩ご飯のメイン</span>
+        <ul>
+          <li>南小樽の海鮮・居酒屋</li>
+          <li>営業:火〜日 17:00〜21:40(月曜休み)</li>
+          <li>予約OK 📞 <a href="tel:0134240769">0134-24-0769</a></li>
+          <li>予算:1人4,000円台くらい</li>
+          <li>移転しているので、行く前に地図で場所を確認</li>
+        </ul>
+        <div class="links">
+          <a href="https://tabelog.com/hokkaido/A0106/A010601/1063301/" target="_blank" rel="noopener">食べログ</a>
+        </div>
+      </div>
+
+      <div class="shop">
+        <p class="shop-name">② 回転寿し 和楽 🍣</p>
+        <span class="shop-role">浜茶屋さんに入れなかった時</span>
+        <ul>
+          <li>営業:11:00〜16:00 ／ 17:00〜22:00</li>
+          <li>16:00〜17:00は準備中</li>
+          <li>予約はできない</li>
+        </ul>
+        <div class="links">
+          <a href="https://tabelog.com/hokkaido/A0106/A010601/1001257/" target="_blank" rel="noopener">食べログ</a>
+          <a href="https://www.waraku1.jp/shop/05/" target="_blank" rel="noopener">公式HP</a>
+        </div>
+      </div>
+
+      <h3 class="food-sec">☀️ 2日目のお昼ご飯(候補)</h3>
+
+      <div class="shop main">
+        <p class="shop-name">③ 北のどんぶり屋 滝波食堂 🍚</p>
+        <span class="shop-role">お昼のメイン</span>
+        <ul>
+          <li>営業:7:00〜17:00</li>
+          <li>小樽駅からすぐ(三角市場の中)</li>
+          <li>混んでる時は整理券が出る</li>
+          <li>夜は営業時間外なので、お昼におすすめ</li>
+        </ul>
+        <div class="links">
+          <a href="https://tabelog.com/hokkaido/A0106/A010601/1027887/" target="_blank" rel="noopener">食べログ</a>
+        </div>
+      </div>
+
+      <div class="shop">
+        <p class="shop-name">④ 市場食堂 味処たけだ 🐟</p>
+        <span class="shop-role">お昼の予備</span>
+        <ul>
+          <li>営業:7:00〜16:00</li>
+          <li>同じ三角市場の中</li>
+          <li>夜は営業時間外なので、お昼におすすめ</li>
+        </ul>
+        <div class="links">
+          <a href="https://tabelog.com/hokkaido/A0106/A010601/1006902/" target="_blank" rel="noopener">食べログ</a>
+        </div>
+      </div>
+
+      <h3 class="food-sec">🍣 お昼も夜もいける！</h3>
+
+      <div class="shop">
+        <p class="shop-name">⑤ 回転寿司 とっぴ〜 小樽運河通り店 🍣</p>
+        <span class="shop-role">昼・夜どっちも</span>
+        <ul>
+          <li>小樽運河近くの回転寿司</li>
+          <li>ボタンエビや生ウニなど、北海道らしいネタに注目！</li>
+          <li>住所:北海道小樽市港町6-4</li>
+          <li>営業:11:00〜21:00(L.O.20:30)※最新情報は要確認</li>
+        </ul>
+        <div class="links">
+          <a href="https://toppi-sushi-otaru.com/" target="_blank" rel="noopener">公式HP</a>
+          <a href="https://tabelog.com/hokkaido/A0106/A010601/1006243/" target="_blank" rel="noopener">食べログ</a>
+        </div>
+      </div>
+
+      <h3 class="food-sec">☕ オススメカフェ</h3>
+
+      <div class="shop">
+        <p class="shop-name">大正硝子 くぼ家 ☕</p>
+        <span class="shop-role">観光の合間の休憩に</span>
+        <ul>
+          <li>明治40年築の建物を使ったレトロな和カフェ</li>
+          <li>手作りの小樽ガラスの器で、プリンやクリームぜんざいなど</li>
+        </ul>
+        <div class="links">
+          <a href="https://tabelog.com/hokkaido/A0106/A010601/1054794/" target="_blank" rel="noopener">食べログ</a>
+          <a href="https://www.otaruglass.com/くぼ家" target="_blank" rel="noopener">公式HP</a>
+        </div>
+      </div>
+
+      <h3 class="food-sec">🎬 参考YouTube</h3>
+      <div class="yt">
+        <a href="https://youtu.be/et4CqzJxqHk?si=m4tyIUhXgc0EX8JW" target="_blank" rel="noopener">【札幌・小樽ひとり旅】北海道のグルメと観光を楽しむ1泊2日<small>OMO5小樽 by 星野リゾートの紹介あり</small></a>
+        <a href="https://youtu.be/ZuBHy9SzYnw?si=GpAcoIrvWMu-b_9L" target="_blank" rel="noopener">小樽で1日6軒食べ飲み！<small>浜茶屋さんが紹介されてるよ</small></a>
+      </div>
+      <div class="alert ice">
+        <p class="alert-title">💡 YouTubeの小ワザ</p>
+        動画右上の⚙️(設定)→「再生速度」→「2倍速」で、情報系の動画をサクッとチェックできるよ✨
       </div>
     </section>
 
