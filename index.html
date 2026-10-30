@@ -1,4 +1,14 @@
-<!doctype html><html><head><meta charset="UTF-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html><head><meta charset="UTF-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" type="image/png" sizes="192x192" href="img/icon-192.png"><link rel="apple-touch-icon" href="img/icon-180.png"><meta name="apple-mobile-web-app-title" content="北海道しおり"><meta name="application-name" content="北海道しおり"><meta name="theme-color" content="#1D3257"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}
+@media not all and (prefers-color-scheme: dark) {
+:root:not([data-theme="dark"]) #ot0:checked ~ .subtabs label[for="ot0"],
+:root:not([data-theme="dark"]) #ot1:checked ~ .subtabs label[for="ot1"],
+:root:not([data-theme="dark"]) #sp0:checked ~ .subtabs label[for="sp0"],
+:root:not([data-theme="dark"]) #sp1:checked ~ .subtabs label[for="sp1"],
+:root:not([data-theme="dark"]) #sp2:checked ~ .subtabs label[for="sp2"] { background: var(--chip-bg); color: var(--title); box-shadow: inset 0 0 0 1.5px var(--title); }
+  :root:not([data-theme="dark"]) .subnext-btns label.go { background: var(--chip-bg); border-color: var(--title); color: var(--title); }
+  :root:not([data-theme="dark"]) .subnext { border-color: var(--title); }
+}
+</style></head><body>
 <title>雪の北海道 旅程表</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500&family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap">
 <style>
@@ -381,6 +391,11 @@ img[width][height] { height: auto; }
 .info ul.prep { list-style: none; padding-left: 0; color: var(--ink); }
 .info ol.prep { margin: 0; padding-left: 1.4em; font-size: 13px; color: var(--ink); display: flex; flex-direction: column; gap: 3px; }
 .prep-tip { margin: 4px 0 0; font-size: 12.5px; font-weight: 700; color: var(--warm-ink); background: var(--warm-bg); border-radius: 12px; padding: 6px 10px; }
+.night-head { margin: 22px 4px 14px; padding: 14px 16px; border-radius: 18px; color: var(--head-ink); background: radial-gradient(circle at 90% 120%, rgba(255,168,64,.55), transparent 55%), linear-gradient(160deg, var(--head-top), var(--head-bottom)); }
+.night-badge { display: inline-block; margin: 0 0 6px; font-size: 11.5px; font-weight: 700; color: #3A2210; background: #FFD38A; border-radius: 999px; padding: 1px 10px; }
+.night-title { margin: 0; font-family: var(--font-soft); font-size: 18px; font-weight: 500; }
+.night-sub { margin: 2px 0 0; font-size: 12.5px; opacity: .9; }
+.stop .links { margin-top: 6px; }
 .plan { background: var(--warm-bg); border: 1.5px solid var(--lantern); border-radius: 18px; padding: 12px 14px; margin: 4px 4px 0; font-size: 13.5px; line-height: 1.9; }
 .plan-title { font-weight: 900; color: var(--warm-ink); margin-bottom: 2px; }
 .foot { margin: 22px 4px 0; text-align: center; font-family: var(--font-soft); font-size: 13px; color: var(--note); }
@@ -546,6 +561,14 @@ img[width][height] { height: auto; }
     <section class="panel" id="d2">
       <h2 class="day-title">2日目｜12月9日(水)</h2>
       <p class="day-sub">🏮 OMO5小樽 → 札幌 → 🏨 マイステイズ札幌駅北口</p>
+      <div class="alert">
+        <p class="alert-title">🎉 本日のメイン盛りだくさん！</p>
+        🍳 朝は、星野リゾートのビュッフェ<br>
+        ✨ 昼以降は、すすきの満喫プラン🤭<br>
+        🗼 待ちに待った札幌観光♥<br>
+        🍣 夜は、お寿司に温泉、シメパフェ<br>
+        ……楽しみすぎる1日✨
+      </div>
       <div class="alert ice">
         <p class="alert-title">⏰ ゆっくり出発できます</p>
         小樽のチェックアウトは12時(レイトチェックアウト)です。
@@ -577,11 +600,66 @@ img[width][height] { height: auto; }
           </div>
         </div>
         <div class="stop free">
-          <span class="time">夜 🍲</span>
-          <p class="place">夜ごはんは自由に</p>
-          <p class="note">このプランはお食事なしです</p>
+          <span class="time">15:00〜16:00 ☕</span>
+          <p class="place">ホテルでひと息</p>
+          <p class="note">荷物を置いて、夜のおでかけに向けてひと休み</p>
+        </div>
+        <div class="stop">
+          <span class="time">16:00ごろ 🏨</span>
+          <p class="place">ホテルを出発</p>
+          <p class="note">大通公園へ移動！</p>
+        </div>
+        <div class="stop highlight">
+          <span class="time">16:30〜18:00ごろ ✨</span>
+          <p class="place highlight">大通公園</p>
+          <p class="note">ホワイトイルミネーション＆クリスマスマーケット🎄<br>札幌の冬景色を楽しむ！</p>
+        </div>
+        <div class="stop free">
+          <span class="time">18:00ごろ 🌃</span>
+          <p class="place">すすきのへ移動</p>
+          <p class="note">駅前通のイルミネーションを見ながら、すすきののネオンや街の雰囲気を体験✨</p>
+        </div>
+        <div class="stop highlight">
+          <span class="time">18:30ごろ 🍣</span>
+          <p class="place highlight">回転寿司 根室花まる</p>
+          <p class="note">ココノススキノ店で、北海道のお寿司を満喫！</p>
+          <div class="links">
+            <a href="https://www.sushi-hanamaru.com/store/area.html" target="_blank" rel="noopener">店舗情報</a>
+          </div>
+        </div>
+        <div class="stop highlight">
+          <span class="time">20:00ごろ ♨️</span>
+          <p class="place highlight">すすきの天然温泉 湯香郷</p>
+          <p class="note">ゆっくり温まる😊</p>
+          <div class="links">
+            <a href="https://www.toukakyo.jp/" target="_blank" rel="noopener">公式サイト</a>
+            <a href="https://onsen.nifty.com/sapporo-onsen/onsen000043/coupon/" target="_blank" rel="noopener">ニフティ温泉 割引券</a>
+          </div>
+        </div>
+        <div class="stop highlight">
+          <span class="time">22:00ごろ 🍨</span>
+          <p class="place highlight">シメパフェ</p>
+          <p class="note">温泉であったまったあとは、札幌名物のシメパフェで1日をしめくくり！</p>
+          <div class="links">
+            <a href="#" class="jump-parfait">🍨 お店の候補を見る</a>
+          </div>
+        </div>
+        <div class="stop">
+          <span class="time">パフェのあと 🚕</span>
+          <p class="place">タクシーでホテルへ</p>
+          <p class="note">夜おそくても楽ちん！</p>
         </div>
       </div>
+
+      <div class="plan" style="margin-top:16px">
+        <p class="plan-title">✨ すすきの満喫プランの魅力</p>
+        ・札幌の冬のイルミネーション<br>
+        ・すすきのの街歩き<br>
+        ・北海道の回転寿司<br>
+        ・天然温泉でゆっくり<br>
+        ・シメパフェで甘い〆
+      </div>
+      <p class="map-note" style="margin-top:8px">※夜のプランはまだ仮。時間は目安で、根室花まるの待ち時間や当日の営業状況によって調整する予定</p>
     </section>
 
     <!-- 3日目 -->
@@ -657,14 +735,6 @@ img[width][height] { height: auto; }
         </dl>
       </div>
 
-      <div class="info">
-        <h3>📝 旅のメモ</h3>
-        <ul>
-          <li>添乗員は同行しません</li>
-          <li>最少催行人員は1名です</li>
-          <li>2027年3月31日(沖縄は5月6日)までに出発の方が対象です</li>
-        </ul>
-      </div>
 
       <h3 class="food-sec">冬の北海道旅支度❄️🐱</h3>
 
@@ -700,7 +770,7 @@ img[width][height] { height: auto; }
 
     <!-- 小樽紹介 -->
     <section class="panel" id="d5">
-      <h2 class="day-title">小樽紹介｜グルメと観光🐟</h2>
+      <h2 class="day-title">小樽｜観光とグルメ🐟</h2>
       <p class="day-sub">小樽の観光とグルメ ・ 作成：だい隊員</p>
 
       <input class="sr" type="radio" name="ot" id="ot0" checked aria-label="🗺️ 観光">
@@ -872,7 +942,7 @@ img[width][height] { height: auto; }
 
     <!-- 札幌紹介 -->
     <section class="panel" id="d6">
-      <h2 class="day-title">札幌紹介｜グルメと観光🦀</h2>
+      <h2 class="day-title">札幌｜観光とグルメ🦀</h2>
       <p class="day-sub">札幌〜すすきのエリア中心 ・ 🏨 ホテルマイステイズ札幌駅北口</p>
 
       <input class="sr" type="radio" name="sp" id="sp0" checked aria-label="🗺️ 観光">
@@ -1140,7 +1210,7 @@ img[width][height] { height: auto; }
 
     <!-- 新千歳空港紹介 -->
     <section class="panel" id="d7">
-      <h2 class="day-title">新千歳空港紹介｜空港グルメ特集✈️</h2>
+      <h2 class="day-title">新千歳空港｜空港グルメ特集✈️</h2>
       <p class="day-sub">北海道旅行 グルメガイド 〜新千歳空港 特集〜</p>
 
       <h3 class="food-sec">🗺️ 空港グルメマップ</h3>
@@ -1272,6 +1342,22 @@ img[width][height] { height: auto; }
           var y = nav.getBoundingClientRect().top + window.pageYOffset - 12;
           window.scrollTo({ top: y, behavior: 'smooth' });
         }, 30);
+      });
+    });
+  } catch (e) {}
+})();
+</script>
+<script>
+(function () {
+  try {
+    document.querySelectorAll('.jump-parfait').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        var t = document.getElementById('r6'), sub = document.getElementById('sp2');
+        if (t) t.checked = true;
+        if (sub) sub.checked = true;
+        var nav = document.querySelector('#d6 .subtabs');
+        if (nav) setTimeout(function () { window.scrollTo({ top: nav.getBoundingClientRect().top + window.pageYOffset - 12, behavior: 'smooth' }); }, 30);
       });
     });
   } catch (e) {}
