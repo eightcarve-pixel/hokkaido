@@ -4,9 +4,9 @@
 :root:not([data-theme="dark"]) #ot1:checked ~ .subtabs label[for="ot1"],
 :root:not([data-theme="dark"]) #sp0:checked ~ .subtabs label[for="sp0"],
 :root:not([data-theme="dark"]) #sp1:checked ~ .subtabs label[for="sp1"],
-:root:not([data-theme="dark"]) #sp2:checked ~ .subtabs label[for="sp2"] { background: var(--chip-bg); color: var(--title); box-shadow: inset 0 0 0 1.5px var(--title); }
-  :root:not([data-theme="dark"]) .subnext-btns label.go { background: var(--chip-bg); border-color: var(--title); color: var(--title); }
-  :root:not([data-theme="dark"]) .subnext { border-color: var(--title); }
+:root:not([data-theme="dark"]) #sp2:checked ~ .subtabs label[for="sp2"] { background: var(--chip-bg); color: var(--title); box-shadow: inset 0 0 0 1.5px var(--lantern); }
+  :root:not([data-theme="dark"]) .subnext-btns label.go { background: var(--chip-bg); border-color: var(--lantern); color: var(--title); }
+  :root:not([data-theme="dark"]) .subnext { border-color: var(--lantern); }
 }
 </style></head><body>
 <title>雪の北海道 旅程表</title>
@@ -396,6 +396,7 @@ img[width][height] { height: auto; }
 .night-title { margin: 0; font-family: var(--font-soft); font-size: 18px; font-weight: 500; }
 .night-sub { margin: 2px 0 0; font-size: 12.5px; opacity: .9; }
 .stop .links { margin-top: 6px; }
+.info .links { margin-top: 4px; }
 .plan { background: var(--warm-bg); border: 1.5px solid var(--lantern); border-radius: 18px; padding: 12px 14px; margin: 4px 4px 0; font-size: 13.5px; line-height: 1.9; }
 .plan-title { font-weight: 900; color: var(--warm-ink); margin-bottom: 2px; }
 .foot { margin: 22px 4px 0; text-align: center; font-family: var(--font-soft); font-size: 13px; color: var(--note); }
@@ -459,8 +460,15 @@ img[width][height] { height: auto; }
       <h2 class="day-title">1日目｜12月8日(火)</h2>
       <p class="day-sub">✈️ 伊丹 → 新千歳 → 🏮 OMO5小樽</p>
       <div class="alert">
-        <p class="alert-title">🍽️ おたる満喫プレート</p>
-        灯る小樽ナイトラウンジで、滞在中1回ご用意があります。
+        <p class="alert-title">🎉 今日のメイン</p>
+        ✈️ お昼は、新千歳空港でラーメンかスープカレー<br>
+        🏛️ 小樽に着いたら、まずは日本銀行(今日しか行けない！)<br>
+        🎵 オルゴール堂・北一硝子・ルタオは、行ける分だけ<br>
+        🍶 夜は浜茶屋さんで海鮮 → ラウンジで「おたる満喫プレート」
+      </div>
+      <div class="alert ice">
+        <p class="alert-title">⏰ 今日は時間との勝負</p>
+        日本銀行の最終入館は16:30。小樽駅に着いたら、寄り道せずに向かおう！
       </div>
       <div class="timeline">
         <div class="stop highlight">
@@ -511,6 +519,14 @@ img[width][height] { height: auto; }
           <p class="place">札幌/新千歳空港 到着</p>
         </div>
         <div class="stop highlight">
+          <span class="time">12:30ごろ 🍜</span>
+          <p class="place highlight">空港でお昼ごはん</p>
+          <p class="note">らーめん空 か GARAKU(スープカレー)で検討中。どちらも国内線ターミナル3階だよ</p>
+          <div class="links">
+            <a href="#" class="jump" data-tab="r7">✈️ 空港グルメを見る</a>
+          </div>
+        </div>
+        <div class="stop highlight">
           <span class="time">13:50 🚃</span>
           <p class="place highlight">新千歳空港駅 発 → 小樽駅 15:04 着</p>
           <p class="note">JR快速エアポート ・ 乗換なし(本命)</p>
@@ -539,22 +555,54 @@ img[width][height] { height: auto; }
           </details>
         </div>
         <div class="stop">
-          <span class="time">15:00 🏮</span>
+          <span class="time">15:15ごろ 🏮</span>
           <p class="place">OMO5小樽 by 星野リゾート</p>
-          <p class="note">チェックイン ／ 1泊目</p>
+          <p class="note">チェックイン ／ 1泊目。荷物を置いて身軽になろう🧳</p>
+          <p class="note">OMO5も日本銀行も、小樽駅から歩いて10分くらいの同じエリアだよ</p>
           <div class="chips">
             <span class="chip">スーペリアルーム</span>
             <span class="chip">禁煙</span>
             <span class="chip">2名1室</span>
             <span class="chip">朝食のみ</span>
           </div>
+          <div class="links">
+            <a href="https://omo-hotels.com/otaru/" target="_blank" rel="noopener">公式HP</a>
+          </div>
         </div>
         <div class="stop highlight">
-          <span class="time">滞在中 ♨️</span>
+          <span class="time">15:30〜16:30ごろ 🏛️</span>
+          <p class="place highlight">日本銀行旧小樽支店 金融資料館<span class="who">💪 だい隊員の希望</span></p>
+          <p class="note">水曜休館なので、行けるのは今日だけ！最終入館16:30・入館無料</p>
+          <div class="links">
+            <a href="https://www3.boj.or.jp/otaru-m/" target="_blank" rel="noopener">公式サイト</a>
+          </div>
+        </div>
+        <div class="stop free">
+          <span class="time">16:30ごろ〜 🎵</span>
+          <p class="place">小樽散策(行ける分だけ)<span class="who">👑 司令官の希望</span></p>
+          <p class="note">小樽運河 → オルゴール堂・北一硝子・ルタオ本店。<br>回りきれなかったお店は2日目の午前に📌</p>
+          <p class="note">🌙 12月の小樽は16時ごろには暗くなるので、運河は夜景を楽しもう✨</p>
+          <div class="links">
+            <a href="#" class="jump" data-tab="r5" data-sub="ot0">🗺️ 小樽の観光を見る</a>
+          </div>
+        </div>
+        <div class="stop highlight">
+          <span class="time">18:00ごろ 🍶</span>
+          <p class="place highlight">浜茶屋さんで晩ごはん</p>
+          <p class="note">南小樽の海鮮・居酒屋。17:00から・予約OK 📞 <a href="tel:0134240769">0134-24-0769</a></p>
+          <p class="note">入れなかったときは、回転寿し 和楽が予備🍣</p>
+          <div class="links">
+            <a href="https://tabelog.com/hokkaido/A0106/A010601/1063301/" target="_blank" rel="noopener">食べログ</a>
+            <a href="#" class="jump" data-tab="r5" data-sub="ot1">🍣 小樽のグルメを見る</a>
+          </div>
+        </div>
+        <div class="stop highlight">
+          <span class="time">20:00ごろ ♨️</span>
           <p class="place highlight">灯る小樽ナイトラウンジ</p>
-          <p class="note">「おたる満喫プレート」を1回ご用意</p>
+          <p class="note">「おたる満喫プレート」でのんびり🍽️</p>
         </div>
       </div>
+      <p class="map-note" style="margin-top:8px">※小樽に着いてからの時間は目安。日本銀行を最優先にして、あとは無理のない範囲で楽しもう😊</p>
     </section>
 
     <!-- 2日目 -->
@@ -583,6 +631,17 @@ img[width][height] { height: auto; }
           <span class="time">12:00 🏮</span>
           <p class="place">OMO5小樽 チェックアウト</p>
         </div>
+        <div class="stop highlight">
+          <span class="time">12:30ごろ 🍚</span>
+          <p class="place highlight">北のどんぶり屋 滝波食堂でお昼</p>
+          <p class="note">三角市場の中、小樽駅のすぐ近く。食べたらそのまま駅から札幌へ🚃</p>
+          <p class="note">🧳 通路がせまいので、スーツケースは小樽駅のコインロッカーに預けてからがおすすめ</p>
+          <p class="note">⏳ 混んでたら整理券が出るよ</p>
+          <div class="links">
+            <a href="https://tabelog.com/hokkaido/A0106/A010601/1027887/" target="_blank" rel="noopener">食べログ</a>
+            <a href="#" class="jump" data-tab="r5" data-sub="ot1">🍣 小樽のグルメを見る</a>
+          </div>
+        </div>
         <div class="stop free">
           <span class="time">午後 🚃</span>
           <p class="place">札幌へ移動</p>
@@ -592,11 +651,15 @@ img[width][height] { height: auto; }
           <span class="time">15:00 🏨</span>
           <p class="place">ホテルマイステイズ札幌駅北口</p>
           <p class="note">チェックイン ／ 2泊目</p>
+          <p class="note">📍 札幌市北区北8条西4-15 ・ JR札幌駅 北口から徒歩約2分</p>
           <div class="chips">
             <span class="chip">スーペリアツイン</span>
             <span class="chip">禁煙</span>
             <span class="chip">2名1室</span>
             <span class="chip">カジュアルステイ</span>
+          </div>
+          <div class="links">
+            <a href="https://www.mystays.com/hotel-mystays-sapporo-station-hokkaido/" target="_blank" rel="noopener">公式HP</a>
           </div>
         </div>
         <div class="stop free">
@@ -623,8 +686,10 @@ img[width][height] { height: auto; }
           <span class="time">18:30ごろ 🍣</span>
           <p class="place highlight">回転寿司 根室花まる</p>
           <p class="note">ココノススキノ店で、北海道のお寿司を満喫！</p>
+          <p class="note">COCONO SUSUKINO B1F。予約できないので、店頭の発券機で受付(L.O. 20:30)</p>
           <div class="links">
-            <a href="https://www.sushi-hanamaru.com/store/area.html" target="_blank" rel="noopener">店舗情報</a>
+            <a href="https://www.sushi-hanamaru.com/store/details/cocono.html?p=b" target="_blank" rel="noopener">公式HP</a>
+            <a href="https://tabelog.com/hokkaido/A0101/A010103/1077328/" target="_blank" rel="noopener">食べログ</a>
           </div>
         </div>
         <div class="stop highlight">
@@ -715,6 +780,7 @@ img[width][height] { height: auto; }
           <div class="row"><dt>お食事</dt><dd>朝食のみ</dd></div>
           <div class="row"><dt>特典</dt><dd>灯る小樽ナイトラウンジで「おたる満喫プレート」(滞在中1回)</dd></div>
         </dl>
+        <div class="links"><a href="https://omo-hotels.com/otaru/" target="_blank" rel="noopener">公式HP</a></div>
       </div>
 
       <div class="info">
@@ -724,7 +790,10 @@ img[width][height] { height: auto; }
           <div class="row"><dt>チェックアウト</dt><dd>11:00</dd></div>
           <div class="row"><dt>お部屋</dt><dd>スーペリアツイン ・ 禁煙 ・ 2名1室</dd></div>
           <div class="row"><dt>プラン</dt><dd>カジュアルステイ(食事なし)</dd></div>
+          <div class="row"><dt>住所</dt><dd>札幌市北区北8条西4-15</dd></div>
+          <div class="row"><dt>アクセス</dt><dd>JR札幌駅 北口から徒歩約2分</dd></div>
         </dl>
+        <div class="links"><a href="https://www.mystays.com/hotel-mystays-sapporo-station-hokkaido/" target="_blank" rel="noopener">公式HP</a></div>
       </div>
 
       <div class="info">
@@ -1001,26 +1070,29 @@ img[width][height] { height: auto; }
         <p class="shop-name">① 根室花まる ココノススキノ店</p>
         <span class="shop-role">⭐ 第一候補</span>
         <ul>
-          <li>COCONO SUSUKINO 地下1階(すすきの)</li>
+          <li>札幌市中央区南4条西4-1-1 COCONO SUSUKINO B1F</li>
+          <li>📞 <a href="tel:08060838486">080-6083-8486</a></li>
           <li>営業:11:00〜21:00(L.O. 20:30)</li>
           <li>席の予約はできず、店頭の発券機で受付</li>
         </ul>
         <div class="links">
           <a href="https://www.sushi-hanamaru.com/store/details/cocono.html?p=b" target="_blank" rel="noopener">公式HP</a>
+          <a href="https://tabelog.com/hokkaido/A0101/A010103/1077328/" target="_blank" rel="noopener">食べログ</a>
         </div>
       </div>
 
       <div class="shop">
-        <p class="shop-name">② できたて屋 JRタワーステラプレイス店</p>
+        <p class="shop-name">② 一夜干しと海鮮丼 できたて屋 時計台店</p>
         <span class="shop-role">花まる系列の焼き魚定食</span>
         <ul>
-          <li>JRタワー ステラプレイス センター6階</li>
-          <li>ホテルから徒歩約5〜10分</li>
-          <li>営業:11:00〜22:00</li>
+          <li>札幌市中央区北1条西2-1 札幌時計台ビル B1F</li>
+          <li>札幌市時計台のすぐ隣🕰️</li>
+          <li>📞 <a href="tel:0112180870">011-218-0870</a></li>
           <li>炭火の一夜干しや海鮮丼が楽しめる</li>
+          <li>営業時間は食べログで確認してね</li>
         </ul>
         <div class="links">
-          <a href="https://tabelog.com/hokkaido/A0101/A010101/1073000/" target="_blank" rel="noopener">食べログ</a>
+          <a href="https://tabelog.com/hokkaido/A0101/A010102/1061566/" target="_blank" rel="noopener">食べログ</a>
         </div>
       </div>
 
@@ -1079,7 +1151,8 @@ img[width][height] { height: auto; }
       <div class="day-plan">
         <b>▶ 12/9(水) 小樽 → 札幌・すすきの</b>
         <ul>
-          <li>札幌駅周辺:できたて屋 / Suage4 / サボイ</li>
+          <li>札幌駅周辺:Suage4 / サボイ</li>
+          <li>大通・時計台周辺:できたて屋</li>
           <li>すすきの:花まる / 瑠玖＆魚平</li>
           <li>昼と夜の組み合わせは、観光の進み具合で決めよう</li>
         </ul>
@@ -1288,7 +1361,7 @@ img[width][height] { height: auto; }
 
   </main>
 
-  <p class="foot">あったか〜い、ほくほくの旅になりますように ❄️♨️</p>
+  <p class="foot">さやか司令官とみんなの小隊夢 〜北海道編〜 ❄️🐾</p>
 </div>
 
 <script>
@@ -1358,6 +1431,24 @@ img[width][height] { height: auto; }
         if (sub) sub.checked = true;
         var nav = document.querySelector('#d6 .subtabs');
         if (nav) setTimeout(function () { window.scrollTo({ top: nav.getBoundingClientRect().top + window.pageYOffset - 12, behavior: 'smooth' }); }, 30);
+      });
+    });
+  } catch (e) {}
+})();
+</script>
+<script>
+(function () {
+  try {
+    document.querySelectorAll('a.jump').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        var t = document.getElementById(a.dataset.tab);
+        if (t) t.checked = true;
+        var sub = a.dataset.sub && document.getElementById(a.dataset.sub);
+        if (sub) sub.checked = true;
+        var sec = document.getElementById('d' + a.dataset.tab.slice(1));
+        var target = (sec && (sec.querySelector('.subtabs') || sec.querySelector('.day-title'))) || null;
+        if (target) setTimeout(function () { window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - 12, behavior: 'smooth' }); }, 30);
       });
     });
   } catch (e) {}
