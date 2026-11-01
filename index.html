@@ -282,6 +282,7 @@ h1, h2, h3, p { margin: 0; }
 .place.highlight { color: var(--berry); }
 .stop.free .place { font-family: var(--font-sans); font-size: 14px; font-weight: 700; color: var(--note); }
 .note { font-size: 12.5px; color: var(--note); }
+.timeline .note { font-size: 14px; line-height: 1.7; }
 .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
 .chip {
   background: var(--chip-bg);
@@ -334,7 +335,10 @@ h1, h2, h3, p { margin: 0; }
 .links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
 .links a { font-size: 12px; font-weight: 700; color: var(--ice-ink); background: var(--ice-bg); border: 1.5px solid var(--mid); border-radius: 999px; padding: 2px 11px; text-decoration: none; }
 .yt { margin: 0 4px 12px; }
-.yt a { display: block; background: var(--card); border: 1.5px solid var(--line); border-radius: 16px; padding: 10px 14px; color: var(--ink); text-decoration: none; font-size: 13px; font-weight: 700; margin-bottom: 8px; }
+.yt a { border-left: 5px solid #E5352B !important; display: block; background: var(--card); border: 1.5px solid var(--line); border-radius: 16px; padding: 10px 14px; color: var(--ink); text-decoration: none; font-size: 13px; font-weight: 700; margin-bottom: 8px; }
+.yt a::before { content: "▶ YouTube"; display: block; width: fit-content; margin-bottom: 5px; padding: 1px 9px; border-radius: 999px; background: #E5352B; color: #fff; font-size: 10.5px; font-weight: 700; }
+.yt-sec { display: flex; align-items: center; gap: 8px; }
+.yt-sec::before { content: "▶"; padding: 2px 9px 2px 10px; border-radius: 7px; background: #E5352B; color: #fff; font-size: 11px; }
 .yt a small { display: block; font-weight: 500; color: var(--note); font-size: 12px; }
 .shop ul a { color: var(--ice-ink); font-weight: 700; }
 .day-plan { margin: 0 4px 12px; background: var(--card); border: 1.5px solid var(--line); border-radius: 18px; padding: 11px 14px; }
@@ -462,7 +466,7 @@ img[width][height] { height: auto; }
       <div class="alert">
         <p class="alert-title">🎉 今日のメイン</p>
         ✈️ お昼は、新千歳空港の「らーめん空」で札幌味噌ラーメン🍜<br>
-        🍰 ルタオでケーキ🥰 → オルゴール堂・北一硝子は行ける分だけ<br>
+        🍰 ルタオでケーキ🥰 → オルゴール堂・北一硝子もまわろう🎵<br>
         🍶 夜は浜茶屋さんで海鮮 → ラウンジで「おたる満喫プレート」
       </div>
       <div class="alert ice">
@@ -571,13 +575,10 @@ img[width][height] { height: auto; }
         </div>
         <div class="stop free">
           <span class="time">15:30ごろ〜 🎵</span>
-          <p class="place">小樽散策(行ける分だけ)<span class="who">👑 司令官の希望</span></p>
+          <p class="place">小樽散策<span class="who">👑 司令官の希望</span></p>
           <p class="note">🍰 <b>司令官のお楽しみ:ルタオ本店でケーキを食べる🥰</b><br>カフェのラストオーダーは17:30ごろ(時期により変動)なので、<b>ルタオを最初に</b>！</p>
-          <p class="note">そのあと、オルゴール堂・北一硝子・小樽運河へ。<br>回りきれなかったお店は2日目の午前に📌</p>
-          <p class="note">⚠️ おすすめの回り方:ルタオ → オルゴール堂 → 北一硝子 → 浜茶屋さん。南小樽の方へ下っていく流れでムダなし🚶<br>小樽運河は、晩ごはんのあとに夜景で楽しむのもおすすめ🌙</p>
-          <p class="note">⚠️ 晩ごはんの前なので、ケーキはお腹のスペースと相談しながら😆</p>
-          <p class="note">🏛️ <b>余裕があれば</b>:日本銀行旧小樽支店も行けるよ。水曜休館なので、行けるのは<b>12/8だけ</b>！(最終入館16:30・入館無料)</p>
-          <p class="note">🌙 12月の小樽は16時ごろには暗くなるので、運河は夜景を楽しもう✨</p>
+          <p class="note">そのあと、オルゴール堂・北一硝子へ。</p>
+          <p class="note">⚠️ おすすめの回り方:ルタオ → オルゴール堂 → 北一硝子 → 浜茶屋さん。南小樽の方へ下っていく流れでムダなし🚶</p>
           <div class="links">
             <a href="#" class="jump" data-tab="r5" data-sub="ot0">🗺️ 小樽の観光を見る</a>
           </div>
@@ -591,6 +592,11 @@ img[width][height] { height: auto; }
             <a href="https://tabelog.com/hokkaido/A0106/A010601/1063301/" target="_blank" rel="noopener">食べログ</a>
             <a href="#" class="jump" data-tab="r5" data-sub="ot1">🍣 小樽のグルメを見る</a>
           </div>
+        </div>
+        <div class="stop highlight">
+          <span class="time">19:30ごろ 🌙</span>
+          <p class="place highlight">小樽運河で夜景さんぽ</p>
+          <p class="note">晩ごはんのあと、ホテルに帰りながら運河へ。12月の小樽は16時ごろには暗くなるので、ガス灯と雪の夜景がきれい✨</p>
         </div>
         <div class="stop highlight">
           <span class="time">20:00ごろ ♨️</span>
@@ -890,8 +896,9 @@ img[width][height] { height: auto; }
         </ul>
       </div>
 
+      <h3 class="food-sec yt-sec">参考YouTube</h3>
       <div class="yt">
-        <a href="https://youtu.be/1ZUTU76l7LY" target="_blank" rel="noopener">🎬 参考動画:冬の北海道旅行のコーデと冬靴の選び方<small>るみのすけ・12〜2月の服装、現地で浮かない冬コーデ、滑り止め付きの靴と足元の安全対策</small></a>
+        <a href="https://youtu.be/1ZUTU76l7LY" target="_blank" rel="noopener">冬の北海道旅行のコーデと冬靴の選び方<small>るみのすけ・12〜2月の服装、現地で浮かない冬コーデ、滑り止め付きの靴と足元の安全対策</small></a>
       </div>
     </section>
 
@@ -1047,7 +1054,7 @@ img[width][height] { height: auto; }
         </div>
       </div>
 
-      <h3 class="food-sec">🎬 参考YouTube</h3>
+      <h3 class="food-sec yt-sec">参考YouTube</h3>
       <div class="yt">
         <a href="https://youtu.be/et4CqzJxqHk?si=m4tyIUhXgc0EX8JW" target="_blank" rel="noopener">【札幌・小樽ひとり旅】北海道のグルメと観光を楽しむ1泊2日<small>OMO5小樽 by 星野リゾートの紹介あり</small></a>
         <a href="https://youtu.be/ZuBHy9SzYnw?si=GpAcoIrvWMu-b_9L" target="_blank" rel="noopener">小樽で1日6軒食べ飲み！<small>浜茶屋さんが紹介されてるよ</small></a>
@@ -1226,7 +1233,7 @@ img[width][height] { height: auto; }
         </ul>
       </div>
 
-      <h3 class="food-sec">🎬 参考YouTube</h3>
+      <h3 class="food-sec yt-sec">参考YouTube</h3>
       <div class="yt">
         <a href="https://youtu.be/yEtFBRuRYz4" target="_blank" rel="noopener">札幌生まれが食べ歩き。マジうま19店【サイコロ5】<small>「瑠玖＆魚平」が良さそう✨(途中長いのでスキップ推奨)</small></a>
       </div>
@@ -1366,7 +1373,7 @@ img[width][height] { height: auto; }
         きのとや(キノトヤ)は<b>2階</b>だよ！
       </div>
 
-      <h3 class="food-sec">🎬 参考YouTube</h3>
+      <h3 class="food-sec yt-sec">参考YouTube</h3>
       <div class="yt">
         <a href="https://youtu.be/XfGLFPz-AUY" target="_blank" rel="noopener">【完全版】道民による絶対に外さない新千歳空港グルメをシーン別にすべて紹介します<small>北海道グルメ</small></a>
       </div>
