@@ -7,6 +7,8 @@
 :root:not([data-theme="dark"]) #mo0:checked ~ .subtabs label[for="mo0"],
 :root:not([data-theme="dark"]) #mo1:checked ~ .subtabs label[for="mo1"],
 :root:not([data-theme="dark"]) #mo2:checked ~ .subtabs label[for="mo2"],
+:root:not([data-theme="dark"]) #sa0:checked ~ .subtabs label[for="sa0"],
+:root:not([data-theme="dark"]) #sa1:checked ~ .subtabs label[for="sa1"],
 :root:not([data-theme="dark"]) #sp2:checked ~ .subtabs label[for="sp2"] { background: var(--chip-bg); color: var(--title); box-shadow: inset 0 0 0 1.5px var(--lantern); }
   :root:not([data-theme="dark"]) .subnext-btns label.go { background: var(--chip-bg); border-color: var(--lantern); color: var(--title); }
   :root:not([data-theme="dark"]) .subnext { border-color: var(--lantern); }
@@ -396,6 +398,12 @@ h1, h2, h3, p { margin: 0; }
 #mo2:checked ~ .subtabs label[for="mo2"] { background: var(--lantern); color: #3A2210; }
 #mo2:focus-visible ~ .subtabs label[for="mo2"] { outline: 3px solid var(--lantern); outline-offset: 2px; }
 #mo2:checked ~ .subpane.mo2 { display: block; }
+#sa0:checked ~ .sapane.sa0, #sa1:checked ~ .sapane.sa1 { display: block; }
+.sapane { display: none; }
+#sa0:focus-visible ~ .subtabs label[for="sa0"], #sa1:focus-visible ~ .subtabs label[for="sa1"] { outline: 3px solid var(--lantern); outline-offset: 2px; }
+#sa0:checked ~ .subtabs label[for="sa0"], #sa1:checked ~ .subtabs label[for="sa1"] { background: var(--lantern); color: #3A2210; border-color: var(--lantern); box-shadow: 0 1px 0 rgba(0,0,0,.35); transform: translateY(3px); }
+.subtabs.two { background: none; border: none; padding: 0; gap: 8px; margin: 4px 4px 18px; border-radius: 0; }
+.subtabs.two label { font-size: 12px; padding: 11px 2px 10px; border-radius: 14px; background: var(--card); border: 1.5px solid var(--line); box-shadow: 0 4px 0 var(--line), 0 6px 8px rgba(0,0,0,.18); transition: transform .08s, box-shadow .08s; }
 .nav-title { margin: 16px 4px 8px; font-size: clamp(11px, 3.6vw, 15px); font-weight: 800; color: var(--title); white-space: nowrap; }
 .subtabs.three { background: none; border: none; padding: 0; gap: 8px; margin: 4px 4px 18px; border-radius: 0; }
 .subtabs.three label { font-size: 12px; padding: 11px 2px 10px; border-radius: 14px; background: var(--card); border: 1.5px solid var(--line); box-shadow: 0 4px 0 var(--line), 0 6px 8px rgba(0,0,0,.18); transition: transform .08s, box-shadow .08s; }
@@ -471,7 +479,7 @@ img[width][height] { height: auto; }
             <div class="mem ai"><b>AI代表</b><span>チャピコ隊員</span><span>ぴっぴ隊員</span></div>
           </div>
           <div class="duo"><figure><img src="img/member-sayaka-dai.webp" width="240" height="240" decoding="async" loading="lazy" alt="さやか司令官とだい隊員"><figcaption>さやか司令官<br>&amp; だい隊員</figcaption></figure><figure><img src="img/member-chapiko-pippi.webp" width="240" height="240" decoding="async" loading="lazy" alt="チャピコ隊員とぴっぴ隊員"><figcaption>チャピコ隊員<br>&amp; ぴっぴ隊員</figcaption></figure></div>
-        <p class="duo-note">❄️ 雪あかりの小樽と札幌へ ❄️<br>🐾 みんなで北海道を楽しむ隊出動〜🐾</p>
+        <p class="duo-note">❄️ 雪あかりの小樽と札幌へ ❄️<br>🐾 〜みんなで北海道を楽しむ隊出動〜🐾</p>
         </div>
       </div>
     </section>
@@ -498,29 +506,29 @@ img[width][height] { height: auto; }
       </div>
       <div class="timeline">
         <div class="stop highlight">
-          <span class="time">7:30 🏠</span>
+          <span class="time">7:50 🏠</span>
           <p class="place highlight">自宅を出発<span class="who">💪 だい隊員の朝</span></p>
           <p class="note">寝屋川市駅まで徒歩15分</p>
         </div>
         <div class="stop">
-          <span class="time">7:52 🚃</span>
-          <p class="place">寝屋川市駅 発 → 伊丹空港 8:49 着</p>
-          <p class="note">京阪 → 大阪モノレール(門真市で乗換)</p>
+          <span class="time">8:11 🚃</span>
+          <p class="place">寝屋川市駅 発 → 伊丹空港 9:12 着</p>
+          <p class="note">京阪 → 大阪モノレール(萱島・門真市で乗換)</p>
           <div class="chips">
-            <span class="chip">約57分</span>
+            <span class="chip">約61分</span>
             <span class="chip">740円</span>
-            <span class="chip">乗換1回</span>
+            <span class="chip">乗換2回</span>
           </div>
           <div class="links">
             <a href="#" class="jump" data-tab="r1" data-sub="mo1">🔍 乗換の詳細・予備の電車を見る</a>
           </div>
         </div>
         <div class="stop">
-          <span class="time">8:49 ✈️</span>
+          <span class="time">9:12 ✈️</span>
           <p class="place">伊丹空港に到着</p>
           <p class="note">ANAのチェックイン・荷物預け → 保安検査 → 搭乗口へ</p>
           <p class="note">⚠️手荷物の預け入れが必要なので要確認(出発20分前が目安)</p>
-          <p class="note">👑 さやか司令官は、8:45ごろ南ターミナル着(くわしくは⬇のボタン)</p>
+          <p class="note">👑 さやか司令官は、9:00〜9:20ごろ南ターミナル着(くわしくは⬇のボタン)</p>
           <div class="links">
             <a href="#" class="jump" data-tab="r1" data-sub="mo2">👑 さやか司令官の朝を見る</a>
           </div>
@@ -537,7 +545,7 @@ img[width][height] { height: auto; }
         <div class="stop highlight">
           <span class="time">12:30ごろ 🍜</span>
           <p class="place highlight">らーめん空でお昼ごはん</p>
-          <p class="note">北海道に着いて最初のごはんは、札幌味噌ラーメン！国内線ターミナル3階にあるよ！</p>
+          <p class="note">北海道に着いて最初の🍚は、札幌味噌ラーメン！国内線ターミナル3階にあるよ！</p>
           <div class="links">
             <a href="https://tabelog.com/hokkaido/A0107/A010701/1047747/" target="_blank" rel="noopener">食べログ</a>
             <a href="#" class="jump" data-tab="r7">✈️ 空港グルメを見る</a>
@@ -613,7 +621,7 @@ img[width][height] { height: auto; }
         <div class="stop highlight">
           <span class="time">19:30ごろ 🌙</span>
           <p class="place highlight">小樽運河で夜景さんぽ</p>
-          <p class="note">晩ごはんのあと、ホテルに帰りながら運河へ<br>12月の小樽は16時ごろから暗くなるよ！</p>
+          <p class="note">晩ごはんの後、🏨に帰りながら運河へ<br>12月の小樽は16時ごろから暗くなるよ！</p>
         </div>
         <div class="stop highlight">
           <span class="time">20:00ごろ 🏮</span>
@@ -629,89 +637,95 @@ img[width][height] { height: auto; }
       <div class="subpane mo1">
       <h3 class="food-sec">💪 だい隊員:寝屋川 → 伊丹空港</h3>
       <div class="alert">
-        <p class="alert-title">⭐ 本命:7:52 寝屋川市駅 発 → 8:49 伊丹空港 着</p>
-        約57分・740円・乗換1回(門真市)。ほかの電車は、下の「予備の電車」を見てね🚃
+        <p class="alert-title">⭐ 本命:8:11 寝屋川市駅 発 → 9:12 伊丹空港 着</p>
+        約61分・740円・乗換2回(萱島・門真市)。乗り遅れた時は、下の「予備の電車」を見てね🚃
       </div>
       <div class="timeline">
         <div class="stop highlight">
-          <span class="time">7:30 🏠</span>
+          <span class="time">7:50 🏠</span>
           <p class="place highlight">自宅を出発</p>
           <p class="note">寝屋川市駅まで徒歩15分</p>
         </div>
         <div class="stop">
-          <span class="time">7:52 🚃</span>
-          <p class="place">寝屋川市駅 発(京阪・淀屋橋行)</p>
-          <p class="note">8:02 門真市駅 着</p>
-          <div class="chips"><span class="chip">京阪</span><span class="chip">約10分</span></div>
+          <span class="time">8:11 🚃</span>
+          <p class="place">寝屋川市駅 発(京阪)</p>
+          <p class="note">8:15 萱島駅 着 → 同じホームで乗換</p>
+          <div class="chips"><span class="chip">京阪</span><span class="chip">約4分</span></div>
         </div>
         <div class="stop">
-          <span class="time">8:06 🚝</span>
+          <span class="time">8:16 🚃</span>
+          <p class="place">萱島駅 発(京阪・淀屋橋行)</p>
+          <p class="note">8:22 門真市駅 着</p>
+          <div class="chips"><span class="chip">京阪</span><span class="chip">約6分</span></div>
+        </div>
+        <div class="stop">
+          <span class="time">8:29 🚝</span>
           <p class="place">門真市駅 発(大阪モノレール・空港行)</p>
-          <p class="note">始発の電車。8:45 空港駅 着</p>
+          <p class="note">始発の電車。9:08 空港駅 着</p>
           <div class="chips"><span class="chip">乗換</span><span class="chip">約39分</span></div>
         </div>
         <div class="stop">
-          <span class="time">8:45 🚶</span>
+          <span class="time">9:08 🚶</span>
           <p class="place">空港駅 → 伊丹空港</p>
           <p class="note">徒歩4分</p>
         </div>
         <div class="stop highlight">
-          <span class="time">8:49 ✈️</span>
+          <span class="time">9:12 ✈️</span>
           <p class="place highlight">伊丹空港に到着</p>
           <p class="note">ANAは南ターミナルだよ</p>
           <p class="note">ANAのチェックイン・荷物預け → 保安検査 → 搭乗口へ</p>
         </div>
       </div>
       <details class="more">
-        <summary>🔁 予備の電車(早め・遅め)</summary>
+        <summary>🔁 予備の電車(1本遅め)</summary>
         <div class="more-body">
-          <p class="more-h">早め:7:37発</p>
+          <p class="more-h">遅め:8:21発</p>
           <ul>
-            <li>7:37 寝屋川市 発 → 8:41 伊丹空港 着</li>
-            <li>自宅は7:15ごろ出発・乗換1回</li>
+            <li>8:21 寝屋川市 発 → 9:21 伊丹空港 着(搭乗の約1時間前)</li>
+            <li>自宅は8:00ごろ出発・乗換2回(萱島・門真市)</li>
+            <li>門真市 8:32着 → 8:38 モノレール 発</li>
           </ul>
-          <p class="more-h">遅め:7:59発</p>
-          <ul>
-            <li>7:59 寝屋川市 発 → 8:58 伊丹空港 着</li>
-            <li>自宅は7:37ごろ出発・乗換2回(萱島・門真市)</li>
-          </ul>
-          <p class="more-note">※9時台の電車は、搭乗に間に合わないので使いません。<br>※12/8の時刻は、旅行前に再確認します。</p>
+          <p class="more-note">※12/8の時刻は、旅行前に再確認します。</p>
         </div>
       </details>
       </div>
       <div class="subpane mo2">
       <h3 class="food-sec">👑 さやか司令官:王寺 → 伊丹空港</h3>
+      <input class="sr" type="radio" name="sa" id="sa0" checked aria-label="A 理想的な場合">
+      <input class="sr" type="radio" name="sa" id="sa1" aria-label="B 次のバスの場合">
+      <nav class="subtabs two" aria-label="sayaka sub">
+        <label for="sa0">A) 理想的な場合<br>9:00 着</label>
+        <label for="sa1">B) 次のバスの場合<br>9:20 着</label>
+      </nav>
+      <div class="sapane sa0">
       <div class="alert">
-        <p class="alert-title">⭐ 本命(第1候補):7:49 王寺駅 発 → 8:45 伊丹空港 着</p>
-        JR大和路線 → 天王寺駅から歩いて → 空港リムジンバス。乗換は天王寺駅の1回だよ🚃
-      </div>
-      <div class="alert ice">
-        <p class="alert-title">⚠️ バスの時間に余裕がありません</p>
-        天王寺駅に着いたら、すぐ歩いてバス停へ！(第1候補は、バスまで余裕なし)
+        <p class="alert-title">⭐ A) 8:01 王寺駅 発 → 9:00 伊丹空港 着</p>
+        8:30のバスに乗れた場合だよ🚌<br>バスまでは4分の余裕。天王寺駅に着いたら、すぐバス停へ！
       </div>
       <div class="timeline">
         <div class="stop highlight">
-          <span class="time">7:49 🚃</span>
+          <span class="time">8:01 🚃</span>
           <p class="place highlight">王寺駅 発(JR大和路線)</p>
-          <p class="note">8:10 天王寺駅 着</p>
-          <div class="chips"><span class="chip">JR</span><span class="chip">約21分</span></div>
+          <p class="note">8:21 天王寺駅 着</p>
+          <p class="note">前の方の車両が、改札に近くて便利</p>
+          <div class="chips"><span class="chip">JR</span><span class="chip">約20分</span></div>
         </div>
         <div class="stop">
-          <span class="time">8:10 🚶</span>
+          <span class="time">8:21 🚶</span>
           <p class="place">天王寺駅 → あべの橋バス停</p>
           <p class="note">中央口改札 → 13番口を出て直進</p>
-          <p class="note">徒歩約5分(436m)</p>
+          <p class="note">徒歩約5分(436m)・8:26 バス停 着</p>
         </div>
         <div class="stop highlight">
-          <span class="time">8:15 🚌</span>
+          <span class="time">8:30 🚌</span>
           <p class="place highlight">あべの橋バス停(A1) 発:空港リムジンバス</p>
           <p class="note">730円・先払い。ICカード・クレカのタッチ払いOK</p>
           <div class="chips"><span class="chip">730円</span><span class="chip">先払い</span></div>
         </div>
         <div class="stop highlight">
-          <span class="time">8:45 ✈️</span>
+          <span class="time">9:00 ✈️</span>
           <p class="place highlight">伊丹空港 南ターミナル 着</p>
-          <p class="note">ANAは南ターミナル。バスは「南 → 北」の順に停まるので、最初に停まるところで降りよう</p>
+          <p class="note">搭乗の1時間20分前</p>
         </div>
         <div class="stop">
           <span class="time">10:20 🛫</span>
@@ -719,35 +733,51 @@ img[width][height] { height: auto; }
           <p class="note">新千歳には12:10着(予定)</p>
         </div>
       </div>
-      <details class="more">
-        <summary>🔁 ほかの候補(早め・遅め)</summary>
-        <div class="more-body">
-          <p class="more-h">第2候補(早め):7:26発</p>
-          <ul>
-            <li>7:26 王寺駅 発(快速・JR難波行き)※前の方の車両が、改札に近くて便利</li>
-            <li>7:52 天王寺駅 着(18番ホーム)</li>
-            <li>中央口改札 → 13番口を出て直進、徒歩約5分(407m)</li>
-            <li>7:57 あべの橋バス停(A1)着 → 8:00 バス 発</li>
-            <li>8:30 伊丹空港 南ターミナル 着(搭乗の1時間50分前)</li>
-            <li>バスまで3分の余裕。乗れなかったら、次の8:15のバスでも大丈夫(南ターミナル8:45着)</li>
-          </ul>
-          <p class="more-h">遅めの候補:8:01発</p>
-          <ul>
-            <li>8:01 王寺駅 発(快速・JR難波行き)※前の方の車両が、改札に近くて便利</li>
-            <li>8:21 天王寺駅 着(17番ホーム)</li>
-            <li>中央口改札 → 13番口を出て直進、徒歩約5分(436m)</li>
-            <li>8:26 あべの橋バス停(A1)着 → 8:30 バス 発</li>
-            <li>9:00 伊丹空港 南ターミナル 着(搭乗の1時間20分前)</li>
-            <li>バスまで4分の余裕。乗れなかったら、次は8:50のバス(南ターミナル9:20着、搭乗の1時間前)で、少しギリギリ</li>
-          </ul>
+      <p class="map-note" style="margin-top:8px">乗れなかったら → 「B) 次のバスの場合」で行こう</p>
+      </div>
+      <div class="sapane sa1">
+      <div class="alert">
+        <p class="alert-title">⭐ B) 8:01 王寺駅 発 → 9:20 伊丹空港 着</p>
+        8:30のバスに乗れなかった場合の、次の8:50のバスだよ🚌<br>バスまで24分の余裕があって安心！
+      </div>
+      <div class="timeline">
+        <div class="stop highlight">
+          <span class="time">8:01 🚃</span>
+          <p class="place highlight">王寺駅 発(JR大和路線)</p>
+          <p class="note">8:21 天王寺駅 着</p>
+          <p class="note">前の方の車両が、改札に近くて便利</p>
+          <div class="chips"><span class="chip">JR</span><span class="chip">約20分</span></div>
         </div>
-      </details>
+        <div class="stop">
+          <span class="time">8:21 🚶</span>
+          <p class="place">天王寺駅 → あべの橋バス停</p>
+          <p class="note">中央口改札 → 13番口を出て直進</p>
+          <p class="note">徒歩約5分(436m)・8:26 バス停 着</p>
+        </div>
+        <div class="stop highlight">
+          <span class="time">8:50 🚌</span>
+          <p class="place highlight">あべの橋バス停(A1) 発:空港リムジンバス</p>
+          <p class="note">730円・先払い。ICカード・クレカのタッチ払いOK</p>
+          <div class="chips"><span class="chip">730円</span><span class="chip">先払い</span></div>
+        </div>
+        <div class="stop highlight">
+          <span class="time">9:20 ✈️</span>
+          <p class="place highlight">伊丹空港 南ターミナル 着</p>
+          <p class="note">搭乗の1時間前</p>
+        </div>
+        <div class="stop">
+          <span class="time">10:20 🛫</span>
+          <p class="place">ANA773 伊丹空港 発</p>
+          <p class="note">新千歳には12:10着(予定)</p>
+        </div>
+      </div>
+      </div>
       <div class="plan" style="margin-top:12px">
         <p class="plan-title">📌 ここだけ注意</p>
         ① バスは「南ターミナル」→「北ターミナル」の順。ANAは南ターミナルなので、最初に停まるところで降りる<br>
         ② 道に迷ったら、スマホで「あべの橋 A1」と検索して地図を見る
       </div>
-      <p class="map-note" style="margin-top:8px">※時刻は11/2時点の情報です。出発前にもう一度確認しよう</p>
+      <p class="map-note" style="margin-top:8px">※時刻は11/4時点の情報です。出発前にもう一度確認しよう</p>
       </div>
     </section>
 
@@ -771,7 +801,6 @@ img[width][height] { height: auto; }
         <div class="stop free">
           <span class="time">8:30ごろ(仮) 🍳</span>
           <p class="place">OMO5小樽で朝ごはん</p>
-          <p class="note">宿泊プランに朝食が含まれています</p>
           <p class="note">🍽️ ビュッフェは 6:30〜9:30(最終入店9:00)・予約不要</p>
           <p class="note">⏰ 8:30は仮の時間です</p>
           <p class="note">🛌 ビュッフェのあとは、チェックアウト(12:00)までゆっくり</p>
@@ -941,9 +970,12 @@ img[width][height] { height: auto; }
         <div class="stop highlight">
           <span class="time">11:30ごろ 🍛</span>
           <p class="place highlight">Suage4(スアゲ4)でお昼</p>
-          <p class="note">札幌の人気スープカレー。ホテルから歩いて8分くらい(miredo 2階)</p>
-          <p class="note">🕐 営業 11:00〜21:00(L.O. 20:30)・予約はできないよ</p>
-          <p class="note">混んでたときは、ホテルから徒歩3分のカリーサボイが予備🍛</p>
+          <p class="note">🍛 札幌の人気スープカレー店を堪能！</p>
+          <p class="note">🏅 食べログ2026 カレー百名店獲得‼️</p>
+          <p class="note">🚶 ホテルから歩いて8分(miredo 2階)</p>
+          <p class="note">🕐 営業 11:00〜21:00(L.O. 20:30)</p>
+          <p class="note">🎫 予約はできないよ</p>
+          <p class="note">🔄 混んでたら、カリーサボイが予備<br>　 (ホテルから徒歩3分)</p>
           <div class="links">
             <a href="https://tabelog.com/hokkaido/A0101/A010101/1064968/" target="_blank" rel="noopener">食べログ</a>
             <a href="#" class="jump" data-tab="r6" data-sub="sp1">🍣 札幌のグルメを見る</a>
@@ -954,16 +986,25 @@ img[width][height] { height: auto; }
           <p class="place">JRで新千歳空港へ</p>
           <p class="note">札幌駅から快速エアポートで40分くらい</p>
         </div>
-        <div class="stop free">
-          <span class="time">14:10ごろ 🛍️</span>
-          <p class="place">空港に着いたら、お土産をゆっくり選ぶ</p>
-          <p class="note">新千歳空港はお土産屋さんがいっぱい！</p>
+        <div class="stop">
+          <span class="time">14:10ごろ 🧳</span>
+          <p class="place">まず、荷物を預ける</p>
+          <p class="note">🧳 JALカウンターで荷物を預けよう</p>
+          <p class="note">⚠️ 保安検査は15:10までに通過！</p>
         </div>
         <div class="stop highlight">
-          <span class="time">14:40ごろ 🍦</span>
+          <span class="time">14:20ごろ 🛍️</span>
+          <p class="place highlight">お土産タイム<span class="who">👑 さやか司令官のお楽しみ</span></p>
+          <p class="note">🎁 新千歳空港は、お土産屋さんがいっぱい！</p>
+          <p class="note">💕 <span style="text-decoration:underline;text-underline-offset:4px">司令官がいちばん楽しみにしてた時間</span></p>
+        </div>
+        <div class="stop highlight">
+          <span class="time">買い物の合間に 😋</span>
           <p class="place highlight">きのとや 新千歳空港店<span class="who">🥰 楽しみにしてるやつ</span></p>
-          <p class="note">お土産を買ったら、ひと休みに🍦 お目当ては<b>極上牛乳ソフト</b>(590円)！</p>
-          <p class="note">国内線ターミナル 2階(センタープラザ)・保安検査場の手前・8:00〜20:00</p>
+          <p class="note">🍦 お目当ては<b>極上牛乳ソフト</b>(590円)！</p>
+          <p class="note">📍 国内線ターミナル2階<br>　 センタープラザ</p>
+          <p class="note">🛂 保安検査場の手前</p>
+          <p class="note">🕐 営業 8:00〜20:00</p>
           <p class="note">⚠️ 食べ終わったら、15:00ごろまでには保安検査場へ！</p>
           <div class="links">
             <a href="https://www.kinotoya.com/shop_list/chitose/" target="_blank" rel="noopener">公式HP</a>
@@ -981,7 +1022,6 @@ img[width][height] { height: auto; }
           <p class="note">おつかれさまでした！</p>
         </div>
       </div>
-      <p class="map-note" style="margin-top:8px">※時間は目安。12/10のJRの時刻は旅行前に確認しよう</p>
     </section>
 
     <!-- ご案内 -->
@@ -1057,7 +1097,7 @@ img[width][height] { height: auto; }
       <div class="info">
         <h3>🛍️ 買うタイミング</h3>
         <ul class="prep">
-          <li>11月に入ってから、ゆっくりそろえればOK</li>
+          <li>12月の前までに、ゆっくりそろえればOK</li>
           <li>靴は、大きめのスポーツ用品店か靴屋さんが狙い目</li>
         </ul>
       </div>
