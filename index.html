@@ -428,6 +428,14 @@ img[width][height] { height: auto; }
 .info .links { margin-top: 4px; }
 .plan { background: var(--warm-bg); border: 1.5px solid var(--lantern); border-radius: 18px; padding: 12px 14px; margin: 4px 4px 0; font-size: 13.5px; line-height: 1.9; }
 .plan-title { font-weight: 900; color: var(--warm-ink); margin-bottom: 2px; }
+.spot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 0 4px 10px; }
+.spot-grid .spot { margin: 0; padding: 10px 10px; }
+.spot-grid .spot b { display: block; font-size: 14px; line-height: 1.45; letter-spacing: -0.02em; }
+.spot-grid.three { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.spot-grid.three .spot { padding: 9px 4px; text-align: center; display: flex; align-items: center; justify-content: center; }
+.spot-grid.three .spot b .em { display: block; font-size: 18px; line-height: 1.3; }
+.spot-grid.three .spot b i { display: block; font-style: normal; font-size: 11px; }
+.spot-grid.three .spot b { letter-spacing: 0; font-family: var(--font-sans); font-weight: 700; font-size: 12px; line-height: 1.45; }
 .foot { margin: 22px 4px 0; text-align: center; font-family: var(--font-soft); font-size: 13px; color: var(--note); }
 </style>
 <div class="app">
@@ -879,7 +887,7 @@ img[width][height] { height: auto; }
           <p class="note">🎫 店頭の発券機で受付</p>
           <p class="note">⚠️ 呼ばれたときにいないと、順番が飛ばされることも</p>
           <div class="links">
-            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%A0%B9%E5%AE%A4%E8%8A%B1%E3%81%BE%E3%82%8B%20%E3%82%B3%E3%82%B3%E3%83%8E%E3%82%B9%E3%82%B9%E3%82%AD%E3%83%8E%E5%BA%97%20%E5%8C%97%E6%B5%B7%E9%81%93%E6%9C%AD%E5%B9%8C%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%8D%974%E6%9D%A1%E8%A5%BF3%E4%B8%81%E7%9B%AE1-1&amp;travelmode=walking" target="_blank" rel="noopener">📍 道順</a>
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%A0%B9%E5%AE%A4%E8%8A%B1%E3%81%BE%E3%82%8B%20%E3%82%B3%E3%82%B3%E3%83%8E%E3%82%B9%E3%82%B9%E3%82%AD%E3%83%8E%E5%BA%97%20%E5%8C%97%E6%B5%B7%E9%81%93%E6%9C%AD%E5%B9%8C%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%8D%974%E6%9D%A1%E8%A5%BF4-1-1&amp;travelmode=walking" target="_blank" rel="noopener">📍 道順</a>
           </div>
         </div>
         <div class="stop highlight">
@@ -908,7 +916,7 @@ img[width][height] { height: auto; }
           <p class="note">📍 COCONO SUSUKINO B1F</p>
           <p class="note">🕐 L.O. 20:30</p>
           <div class="links">
-            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%A0%B9%E5%AE%A4%E8%8A%B1%E3%81%BE%E3%82%8B%20%E3%82%B3%E3%82%B3%E3%83%8E%E3%82%B9%E3%82%B9%E3%82%AD%E3%83%8E%E5%BA%97%20%E5%8C%97%E6%B5%B7%E9%81%93%E6%9C%AD%E5%B9%8C%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%8D%974%E6%9D%A1%E8%A5%BF3%E4%B8%81%E7%9B%AE1-1&amp;travelmode=walking" target="_blank" rel="noopener">📍 道順</a>
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%A0%B9%E5%AE%A4%E8%8A%B1%E3%81%BE%E3%82%8B%20%E3%82%B3%E3%82%B3%E3%83%8E%E3%82%B9%E3%82%B9%E3%82%AD%E3%83%8E%E5%BA%97%20%E5%8C%97%E6%B5%B7%E9%81%93%E6%9C%AD%E5%B9%8C%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%8D%974%E6%9D%A1%E8%A5%BF4-1-1&amp;travelmode=walking" target="_blank" rel="noopener">📍 道順</a>
             <a href="https://www.sushi-hanamaru.com/store/details/cocono.html?p=b" target="_blank" rel="noopener">公式HP</a>
             <a href="https://tabelog.com/hokkaido/A0101/A010103/1077328/" target="_blank" rel="noopener">食べログ</a>
           </div>
@@ -1195,7 +1203,6 @@ img[width][height] { height: auto; }
           <li>営業:火〜日 17:00〜21:40(月曜休み)</li>
           <li>予約OK 📞 <a href="tel:0134240769">0134-24-0769</a></li>
           <li>予算:1人4,000円台くらい</li>
-          <li>移転しているので、行く前に地図で場所を確認</li>
         </ul>
         <div class="links">
           <a href="https://tabelog.com/hokkaido/A0106/A010601/1063301/" target="_blank" rel="noopener">食べログ</a>
@@ -1310,27 +1317,37 @@ img[width][height] { height: auto; }
       <div class="subpane sp0">
       <h3 class="food-sec">🗺️ 札幌観光マップ</h3>
       <div style="margin:0 4px">
-        <img class="map-img" src="img/sapporo-map.webp" width="1300" height="1188" decoding="async" loading="lazy" alt="札幌観光マップ:ホテルマイステイズ札幌駅北口を拠点に、時計台・赤れんが庁舎・大通公園・テレビ塔・AOAO SAPPORO・すすきのへの徒歩時間と、2日目のモデルコース">
+        <img class="map-img" src="img/sapporo-map.webp" width="1312" height="1199" decoding="async" loading="lazy" alt="札幌観光マップ:ホテルマイステイズ札幌駅北口を拠点に、時計台・赤れんが庁舎・大通公園・テレビ塔・AOAO SAPPORO・すすきのへの徒歩時間と、2日目のモデルコース">
         <p class="map-note">ピンチで拡大して見てね 🔍</p>
       </div>
 
-      <h3 class="food-sec">⛄ 札幌観光スポット候補(12/9 水)</h3>
+      <h3 class="food-sec">⛄ 札幌観光スポット(12/9 水)</h3>
       <div class="alert">
         <p class="alert-title">📌 12/9は小樽から札幌へ移動する日</p>
-        全部回るより、行きたい場所を選んでのんびり観光する予定😊
+        行く場所は決まったよ！あとは楽しむだけ😊
       </div>
-      <p class="day-sub" style="margin-top:4px">🥇 優先候補5つ</p>
-        <a class="spot top" href="https://odori-park.jp/" target="_blank" rel="noopener"><b>🎄 大通公園</b><small>イルミネーション・クリスマスマーケット</small></a>
-        <a class="spot top" href="https://www.hokkaido-redbrick.jp/" target="_blank" rel="noopener"><b>🧱 赤れんが庁舎</b><small>歴史的建築・写真撮影</small></a>
-        <a class="spot top" href="https://www.tv-tower.co.jp/" target="_blank" rel="noopener"><b>🗼 さっぽろテレビ塔</b><small>札幌の夜景</small></a>
-        <a class="spot top" href="https://aoao-sapporo.blue/" target="_blank" rel="noopener"><b>🐧 AOAO SAPPORO</b><small>ペンギンやクラゲがいる都市型水族館</small></a>
-        <a class="spot top" href="https://www.sapporo-bier-garten.jp/" target="_blank" rel="noopener"><b>🍖 サッポロビール園</b><small>ジンギスカン</small></a>
-      <p class="day-sub" style="margin-top:14px">✨ プラスアルファ候補</p>
-        <a class="spot" href="https://sapporoshi-tokeidai.jp/" target="_blank" rel="noopener"><b>🕰️ 札幌市時計台</b><small>札幌の定番スポット</small></a>
-        <a class="spot" href="https://www.shiroikoibitopark.jp/" target="_blank" rel="noopener"><b>🍫 白い恋人パーク</b><small>お菓子・スイーツ・お土産</small></a>
-        <a class="spot" href="https://www.susukino-ta.jp/" target="_blank" rel="noopener"><b>🌃 すすきの</b><small>ネオン街散策・夜ごはん</small></a>
-        <a class="spot" href="http://www.ganso-yokocho.com/" target="_blank" rel="noopener"><b>🍜 元祖さっぽろラーメン横丁</b><small>夜のラーメン</small></a>
-        <a class="spot" href="https://okurayama-jump.jp/" target="_blank" rel="noopener"><b>🌙 大倉山展望台</b><small>ジャンプ台と札幌の景色</small></a>
+      <p class="day-sub" style="margin-top:4px">⭐ 行く予定(2日目の順番)</p>
+      <div class="spot-grid">
+        <a class="spot top" href="https://www.hokkaido-redbrick.jp/" target="_blank" rel="noopener"><b>① 🧱 赤れんが庁舎</b><small>歴史的建築・写真撮影</small></a>
+        <a class="spot top" href="https://sapporoshi-tokeidai.jp/" target="_blank" rel="noopener"><b>② 🕰️ 時計台</b><small>札幌の定番スポット</small></a>
+        <a class="spot top" href="https://www.tv-tower.co.jp/" target="_blank" rel="noopener"><b>③ 🗼 テレビ塔</b><small>🔭 展望台から一望<br>🌃 札幌の夜景✨</small></a>
+        <a class="spot top" href="https://odori-park.jp/" target="_blank" rel="noopener"><b>④ 🎄 大通公園</b><small>✨ イルミネーション<br>🎅 クリスマス市</small></a>
+      </div>
+      <div class="plan" style="margin:2px 4px 0">
+        <p class="plan-title">🚶 ぶらぶら散歩コース(ゴールはすすきの！)</p>
+        🏨 ホテル → 🧱 赤れんが庁舎 → 🕰️ 時計台 → 🗼 テレビ塔 → 🎄 大通公園 → 🌃 すすきの
+      </div>
+      <p class="map-note" style="text-align:left">🚶 寄り道なしなら、ぜんぶ歩いて40分くらい</p>
+      <p class="day-sub" style="margin-top:14px">😋 時間があれば…</p>
+      <div class="spot-grid three">
+        <a class="spot" href="https://aoao-sapporo.blue/" target="_blank" rel="noopener"><b><span class="em">🐧</span>AOAO SAPPORO</b></a>
+        <a class="spot" href="https://www.susukino-ta.jp/" target="_blank" rel="noopener"><b><span class="em">🌃</span>すすきの</b></a>
+        <a class="spot" href="http://www.ganso-yokocho.com/" target="_blank" rel="noopener"><b><span class="em">🍜</span>ラーメン横丁</b></a>
+        <a class="spot" href="https://www.sapporo-bier-garten.jp/" target="_blank" rel="noopener"><b><span class="em">🍖</span>ビール園<i>🚌</i></b></a>
+        <a class="spot" href="https://www.shiroikoibitopark.jp/" target="_blank" rel="noopener"><b><span class="em">🍫</span>白い恋人パーク<i>🚌</i></b></a>
+        <a class="spot" href="https://okurayama-jump.jp/" target="_blank" rel="noopener"><b><span class="em">🌙</span>大倉山<i>🚌</i></b></a>
+      </div>
+      <p class="map-note" style="text-align:left">⚠️ : 🚌 は、車・バスで10〜25分くらいかかる場所だよ！</p>
       <p class="map-note" style="margin-top:8px">※営業時間・イベント開催状況は、旅行前に各公式サイトで確認しよう！</p>
         <div class="subnext">
           <p>👀 観光スポットのあとは、グルメとシメパフェもチェックしてね！</p>
