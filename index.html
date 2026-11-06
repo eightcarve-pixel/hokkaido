@@ -436,6 +436,20 @@ img[width][height] { height: auto; }
 .spot-grid.three .spot b .em { display: block; font-size: 18px; line-height: 1.3; }
 .spot-grid.three .spot b i { display: block; font-style: normal; font-size: 11px; }
 .spot-grid.three .spot b { letter-spacing: 0; font-family: var(--font-sans); font-weight: 700; font-size: 12px; line-height: 1.45; }
+.shop.fold { padding: 0; border: 1.5px solid #B9C3CC; box-shadow: 0 2px 6px rgba(40, 50, 60, 0.12); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .shop.fold { border-color: #6A7C96; box-shadow: 0 3px 8px rgba(0, 0, 0, 0.45); } }
+:root[data-theme="dark"] .shop.fold { border-color: #6A7C96; box-shadow: 0 3px 8px rgba(0, 0, 0, 0.45); }
+.shop.fold summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 8px; padding: 11px 14px; }
+.shop.fold summary::-webkit-details-marker { display: none; }
+.shop.fold summary .shop-name { flex: 1; min-width: 0; color: var(--note); }
+.shop.fold summary::after { content: "▼"; font-size: 10px; color: var(--mid); }
+.shop.fold[open] summary::after { content: "▲"; }
+.shop.fold[open] summary .shop-name { color: var(--ink); }
+.shop.fold[open] { padding: 0 0 12px; }
+.shop.fold > :not(summary) { margin-left: 14px; margin-right: 14px; }
+.shop.fold > .shop-role { margin-top: 0; }
+.links.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.links.grid2 a { font-size: 11px; padding: 3px 4px; text-align: center; white-space: normal; line-height: 1.5; }
 .foot { margin: 22px 4px 0; text-align: center; font-family: var(--font-soft); font-size: 13px; color: var(--note); }
 </style>
 <div class="app">
@@ -936,8 +950,8 @@ img[width][height] { height: auto; }
           <p class="place highlight">シメパフェ ななかま堂</p>
           <p class="note">温泉であったまったあとは、札幌名物のシメパフェで1日をしめくくり！</p>
           <p class="note">水曜は24:00まで営業(L.O. 23:30)</p>
-          <p class="note">🔁 混んでたときの代替候補:<b>幸せのレシピ〜スイート〜Plus</b>(深夜3時まで)🌙</p>
-          <div class="links">
+          <p class="note">👑 さやか司令官のイチオシ:<b>幸せのレシピ〜スイート〜Plus</b>(深夜3時まで)🌙</p>
+          <div class="links grid2">
             <a href="https://www.google.com/maps/dir/?api=1&amp;destination=%E5%A4%9C%E3%83%91%E3%83%95%E3%82%A7%E5%B0%82%E9%96%80%E5%BA%97%20%E3%81%AA%E3%81%AA%E3%81%8B%E3%81%BE%E5%A0%82%20%E5%8C%97%E6%B5%B7%E9%81%93%E6%9C%AD%E5%B9%8C%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%8D%974%E6%9D%A1%E8%A5%BF5-10&amp;travelmode=walking" target="_blank" rel="noopener">📍 道順</a>
             <a href="https://www.google.com/maps/dir/?api=1&amp;destination=%E5%B9%B8%E3%81%9B%E3%81%AE%E3%83%AC%E3%82%B7%E3%83%94%20%E3%82%B9%E3%82%A4%E3%83%BC%E3%83%88%20Plus%20%E5%8C%97%E6%B5%B7%E9%81%93%E6%9C%AD%E5%B9%8C%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%8D%974%E6%9D%A1%E8%A5%BF3-1&amp;travelmode=walking" target="_blank" rel="noopener">📍 幸せのレシピの道順</a>
             <a href="https://tabelog.com/hokkaido/A0101/A010103/1055816/" target="_blank" rel="noopener">ななかま堂 食べログ</a>
@@ -1361,17 +1375,17 @@ img[width][height] { height: auto; }
       </div>
       <div class="subpane sp1">
       <div class="alert">
-        <p class="alert-title">😊 候補だから、見るだけでOK！</p>
-        気になるお店があったら教えてね。
+        <p class="alert-title">🎉 待ちに待った、札幌のグルメを堪能！</p>
+        回転寿司、〆パフェ、スープカレーまで🥰
       </div>
 
       <h3 class="food-sec">🍣 寿司・海鮮</h3>
 
       <div class="shop main">
         <p class="shop-name">① 根室花まる ココノススキノ店</p>
-        <span class="shop-role">⭐ 第一候補</span>
+        <span class="shop-role">⭐ 2日目の晩ごはんに決定！</span>
         <ul>
-          <li>札幌市中央区南4条西4-1-1 COCONO SUSUKINO B1F</li>
+          <li>COCONO SUSUKINO B1F</li>
           <li>📞 <a href="tel:08060838486">080-6083-8486</a></li>
           <li>営業:11:00〜21:00(L.O. 20:30)</li>
           <li>席の予約はできず、店頭の発券機で受付</li>
@@ -1382,24 +1396,22 @@ img[width][height] { height: auto; }
         </div>
       </div>
 
-      <div class="shop">
-        <p class="shop-name">② 一夜干しと海鮮丼 できたて屋 時計台店</p>
-        <span class="shop-role">花まる系列の焼き魚定食</span>
+      <details class="shop fold">
+        <summary><span class="shop-name">② 一夜干しと海鮮丼 できたて屋 時計台店</span></summary>
+        <span class="shop-role">花まるが混みすぎたときの予備</span>
         <ul>
-          <li>札幌市中央区北1条西2-1 札幌時計台ビル B1F</li>
           <li>札幌市時計台のすぐ隣🕰️</li>
           <li>📞 <a href="tel:0112180870">011-218-0870</a></li>
           <li>炭火の一夜干しや海鮮丼が楽しめる</li>
-          <li>営業時間は食べログで確認してね</li>
         </ul>
         <div class="links">
           <a href="https://tabelog.com/hokkaido/A0101/A010102/1061566/" target="_blank" rel="noopener">食べログ</a>
         </div>
-      </div>
+      </details>
 
-      <div class="shop main">
-        <p class="shop-name">③ 瑠玖＆魚平(るっく＆うおへい)</p>
-        <span class="shop-role">⭐ おすすめ</span>
+      <details class="shop fold">
+        <summary><span class="shop-name">③ 瑠玖＆魚平(るっく＆うおへい)</span></summary>
+        <span class="shop-role">花まるが混みすぎたときの予備</span>
         <ul>
           <li>札幌・狸小路6丁目の海鮮居酒屋</li>
           <li>予算:1人 3,000〜5,000円くらい</li>
@@ -1409,7 +1421,7 @@ img[width][height] { height: auto; }
         <div class="links">
           <a href="https://www.izakaya-rukku.com/" target="_blank" rel="noopener">公式HP</a>
         </div>
-      </div>
+      </details>
 
       <h3 class="food-sec">🍛 スープカレー</h3>
 
@@ -1417,8 +1429,8 @@ img[width][height] { height: auto; }
         <p class="shop-name">① Suage4(スアゲ4)</p>
         <span class="shop-role">⭐ 3日目のお昼に決定！</span>
         <ul>
-          <li>🏆 食べログ カレーEAST百名店2026</li>
-          <li>札幌市中央区北3条西3丁目1-1 miredo 2階</li>
+          <li>🏅 食べログ2026 カレー百名店獲得‼️</li>
+          <li>miredo 2階</li>
           <li>ホテルから徒歩約8分(800m)</li>
           <li>営業:11:00〜21:00(L.O. 20:30)</li>
           <li>席の予約はできない</li>
@@ -1429,11 +1441,10 @@ img[width][height] { height: auto; }
         </div>
       </div>
 
-      <div class="shop">
-        <p class="shop-name">② カリーサボイ(Curry SAVOY)</p>
+      <details class="shop fold">
+        <summary><span class="shop-name">② カリーサボイ(Curry SAVOY)</span></summary>
         <span class="shop-role">🏆 食べログ カレー百名店</span>
         <ul>
-          <li>札幌市北区北8条西4丁目</li>
           <li>ホテルから徒歩約3分</li>
           <li>スープの旨みとスパイスが魅力</li>
           <li>スアゲ4が混んでたときの予備</li>
@@ -1441,54 +1452,14 @@ img[width][height] { height: auto; }
         <div class="links">
           <a href="https://tabelog.com/hokkaido/A0101/A010101/1060249/" target="_blank" rel="noopener">食べログ</a>
         </div>
-      </div>
-
-      <h3 class="food-sec">📅 日程別の候補</h3>
-
-      <div class="day-plan">
-        <b>▶ 12/8(火) 空港 → 小樽</b>
-        <ul>
-          <li>昼:新千歳空港「らーめん空」🍜</li>
-          <li>夜:小樽「浜茶屋」(予備:和楽)→ ラウンジで「おたる満喫プレート」</li>
-          <li>ルタオのケーキもあるので、食べ過ぎ注意🍰</li>
-        </ul>
-      </div>
-      <div class="day-plan">
-        <b>▶ 12/9(水) 小樽 → 札幌・すすきの</b>
-        <ul>
-          <li>朝:OMO5小樽のビュッフェ</li>
-          <li>昼:小樽「滝波食堂」(三角市場)</li>
-          <li>夜:「根室花まる ココノススキノ店」🍣(17時ごろに整理券)</li>
-          <li>〆:「ななかま堂」でシメパフェ🍨(代わりの候補:幸せのレシピ)</li>
-          <li>花まるが混みすぎたときの予備:できたて屋 時計台店 / 瑠玖＆魚平</li>
-        </ul>
-      </div>
-      <div class="day-plan">
-        <b>▶ 12/10(木) 札幌 → 空港</b>
-        <ul>
-          <li>昼:「Suage4」でスープカレー🍛(予備:カリーサボイ)</li>
-          <li>空港ではお土産と、きのとやの極上牛乳ソフト🍦</li>
-        </ul>
-      </div>
+      </details>
 
       <h3 class="food-sec yt-sec">参考YouTube</h3>
       <div class="yt">
         <a href="https://youtu.be/yEtFBRuRYz4" target="_blank" rel="noopener">札幌生まれが食べ歩き。マジうま19店【サイコロ5】<small>「瑠玖＆魚平」が良さそう✨(途中長いのでスキップ推奨)</small></a>
       </div>
 
-      <div class="plan">
-        <p class="plan-title">💡 メモ</p>
-        ① 寿司・焼き魚・居酒屋・カレーで、ジャンルを分ける<br>
-        ② 札幌駅周辺は、ホテル近くのお店を使う<br>
-        ③ 1日に詰め込みすぎない
-      </div>
-
-      <div class="alert ice" style="margin-top:14px">
-        <p class="alert-title">⚠️ 出発前に確認</p>
-        ・12/9(水)の各店の営業状況<br>
-                ・各店の営業時間・定休日・価格<br>
-        ※お店は候補段階です
-      </div>
+      <p class="map-note" style="margin-top:8px">※営業時間は、旅行前に確認しよう</p>
         <div class="subnext">
           <p>👀 ご飯のあとは、シメパフェもチェックしてね！</p>
           <p class="subnext-sub">「↑」を押すと、このページの最初に戻れるよ</p>
@@ -1511,31 +1482,31 @@ img[width][height] { height: auto; }
       </div>
       <div class="shop main">
         <p class="shop-name">① ななかま堂</p>
-        <span class="shop-role">⭐ 第1候補(決定！)</span>
+        <span class="shop-role">⭐ 2日目のシメパフェに決定！</span>
         <ul>
           <li>営業:日〜木 18:00〜24:00 ／ 金・土・祝前日 18:00〜翌2:00</li>
           <li>定休日:不定休</li>
-          <li>和の素材を生かした、独創的で美しい夜パフェ。札幌らしい本格的なシメパフェを楽しみたい人に！</li>
+          <li>和の素材を生かした、美しい夜パフェ。札幌シメパフェの代表店🍨</li>
         </ul>
         <div class="links">
           <a href="https://tabelog.com/hokkaido/A0101/A010103/1055816/" target="_blank" rel="noopener">食べログ</a>
         </div>
       </div>
-      <div class="shop">
-        <p class="shop-name">② 幸せのレシピ〜スイート〜Plus</p>
-        <span class="shop-role">🔁 ななかま堂が混んでたときの代替候補</span>
+      <div class="shop main">
+        <p class="shop-name">④ 幸せのレシピ〜スイート〜Plus</p>
+        <span class="shop-role">👑 さやか司令官のイチオシ！</span>
         <ul>
           <li>営業:19:00〜翌3:00</li>
-          <li>定休日:無休(※すすきの店の情報。Plusが別店舗なら要確認)</li>
-          <li>個性的なパフェの専門店。深夜まで営業しているので、ほかが混んでいたときの候補にも！</li>
+          <li>定休日:無休</li>
+          <li>見た目もかわいい、ボリュームたっぷりのパフェ専門店。深夜3時まで営業🌙</li>
         </ul>
         <div class="links">
           <a href="https://tabelog.com/hokkaido/A0101/A010103/1042604/" target="_blank" rel="noopener">食べログ</a>
         </div>
       </div>
-      <div class="shop">
-        <p class="shop-name">③ パフェテリア パル</p>
-        <span class="shop-role">ななかま堂と並ぶ有力候補</span>
+      <details class="shop fold">
+        <summary><span class="shop-name">② パフェテリア パル</span></summary>
+        <span class="shop-role">人気の夜パフェ専門店</span>
         <ul>
           <li>営業:日〜木 18:00〜24:00 ／ 金・土・祝前日 18:00〜翌2:00</li>
           <li>定休日:不定休</li>
@@ -1544,9 +1515,9 @@ img[width][height] { height: auto; }
         <div class="links">
           <a href="https://tabelog.com/hokkaido/A0101/A010103/1049420/" target="_blank" rel="noopener">食べログ</a>
         </div>
-      </div>
-      <div class="shop">
-        <p class="shop-name">④ INITIAL Sapporo(イニシャル サッポロ)</p>
+      </details>
+      <details class="shop fold">
+        <summary><span class="shop-name">③ INITIAL Sapporo(イニシャル サッポロ)</span></summary>
         <span class="shop-role">華やか系</span>
         <ul>
           <li>営業:月〜土 17:00〜24:00(L.O.23:30)／ 日・祝 17:00〜23:00(L.O.22:30)</li>
@@ -1556,9 +1527,9 @@ img[width][height] { height: auto; }
         <div class="links">
           <a href="https://tabelog.com/hokkaido/A0101/A010103/1051823/" target="_blank" rel="noopener">食べログ</a>
         </div>
-      </div>
-      <div class="shop">
-        <p class="shop-name">⑤ パフェ、珈琲、酒、佐藤 本店</p>
+      </details>
+      <details class="shop fold">
+        <summary><span class="shop-name">⑤ パフェ、珈琲、酒、佐藤 本店</span></summary>
         <span class="shop-role">昼から行ける</span>
         <ul>
           <li>営業:13:00〜24:00(金・土は翌1:00まで)</li>
@@ -1568,14 +1539,8 @@ img[width][height] { height: auto; }
         <div class="links">
           <a href="https://tabelog.com/hokkaido/A0101/A010102/1077806/" target="_blank" rel="noopener">食べログ</a>
         </div>
-      </div>
-      <div class="plan">
-        <p class="plan-title">🍨 シメパフェは「ななかま堂」に決定！</p>
-        第1候補:ななかま堂(和の素材を生かした、札幌らしい夜パフェ✨)<br>
-        🔁 ななかま堂が混んでたら → <b>幸せのレシピ〜スイート〜Plus</b>(深夜3時まで)<br>
-        そのほかの候補:パフェテリア パル / INITIAL Sapporo / 佐藤 本店
-      </div>
-      <p class="map-note" style="margin-top:8px">※営業時間・定休日は変更される場合があるため、旅行前に最新情報を確認してね</p>
+      </details>
+      <p class="map-note" style="margin-top:8px">※営業時間は、旅行前に確認しよう</p>
         <div class="subnext">
           <p>👀 パフェのほかに、観光スポットとグルメもあるよ！</p>
           <p class="subnext-sub">「↑」を押すと、このページの最初に戻れるよ</p>
@@ -1591,7 +1556,7 @@ img[width][height] { height: auto; }
     <!-- 新千歳空港紹介 -->
     <section class="panel" id="d7">
       <h2 class="day-title">新千歳空港｜空港グルメ特集✈️</h2>
-      <p class="day-sub">北海道旅行 グルメガイド 〜新千歳空港 特集〜</p>
+      <p class="day-sub">到着と帰りの日に寄るよ✈️</p>
 
       <h3 class="food-sec">🗺️ 空港グルメマップ</h3>
       <p class="day-sub" style="margin-top:-4px">【3階】飲食メインスペース</p>
@@ -1620,10 +1585,9 @@ img[width][height] { height: auto; }
         <p class="shop-name">らーめん空 新千歳空港店</p>
         <span class="shop-role">⭐ 1日目のお昼に決定！</span>
         <ul>
+          <li>北海道に着いて最初のごはん🍜</li>
           <li>味噌ラーメン</li>
           <li>国内線ターミナルビル 3階</li>
-          <li>北海道に着いて最初のごはん🍜</li>
-          <li>札幌味噌ラーメンを楽しみたいときに！</li>
         </ul>
         <div class="links">
           <a href="https://tabelog.com/hokkaido/A0107/A010701/1047747/" target="_blank" rel="noopener">食べログ</a>
@@ -1631,8 +1595,8 @@ img[width][height] { height: auto; }
       </div>
 
       <h3 class="food-sec">🍛 スープカレー</h3>
-      <div class="shop">
-        <p class="shop-name">GARAKU 新千歳空港店</p>
+      <details class="shop fold">
+        <summary><span class="shop-name">GARAKU 新千歳空港店</span></summary>
         <span class="shop-role">札幌の人気スープカレー店</span>
         <ul>
           <li>国内線ターミナルビル 3階</li>
@@ -1643,13 +1607,14 @@ img[width][height] { height: auto; }
           <a href="https://s-garaku.com/shoplist.php" target="_blank" rel="noopener">公式店舗一覧</a>
           <a href="https://tabelog.com/hokkaido/A0107/A010701/1080050/" target="_blank" rel="noopener">食べログ</a>
         </div>
-      </div>
+      </details>
 
       <h3 class="food-sec">🍦 スイーツ</h3>
       <div class="shop main">
         <p class="shop-name">きのとや 新千歳空港店</p>
-        <span class="shop-role">🍦 極上牛乳ソフト 590円</span>
+        <span class="shop-role">⭐ 3日目のおやつに決定！</span>
         <ul>
+          <li>🍦 極上牛乳ソフト 590円</li>
           <li>国内線ターミナル 2階(センタープラザ)</li>
           <li>営業:8:00〜20:00</li>
           <li>保安検査場の手前にあるよ！</li>
@@ -1659,12 +1624,6 @@ img[width][height] { height: auto; }
         </div>
       </div>
 
-      <div class="alert ice" style="margin-top:14px">
-        <p class="alert-title">⚠️ 出発前に確認</p>
-        ・各店の営業時間・定休日<br>
-        ・価格(変わることがあります)<br>
-        ※お店は候補段階です
-      </div>
     </section>
 
   </main>
